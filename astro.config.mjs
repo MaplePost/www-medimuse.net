@@ -5,7 +5,6 @@ import tailwind from "@astrojs/tailwind";
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://maplepost.github.io',
-  base: '/www-medimuse.net',
+  site: 'https://medimuse.net/',
   integrations: [tailwind()]
 });
