@@ -1,4 +1,7 @@
 ---
+// Layouts
+import PageTemplate from "../layouts/PageTemplate.astro";
+
 // Component Imports
 
 // Sections
@@ -8,90 +11,22 @@ import StateSongSection from "../components/StateSongSection.astro";
 import ContactSection from "../components/ContactSection.astro";
 
 // Main parts
+import Navigation from "../components/Navigation.astro";
 import Footer from "../components/Footer.astro";
 
 // UI/UX extra bits
-import Divider from "../components/Divider.astro";
+
+// Variables
+const title = "MediMuse.Net - 2022";
+const description = "Developer and Artifact repository for MediMuse Software.";
+const themeColor = "#FAFAFA";
 ---
 
-<!DOCTYPE html>
-<html class="no-js" lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<title>MediMuse 2022</title>
-		<meta name="description" content="" />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
-
-		<link rel="stylesheet" href="./static/css/main.css" />
-		<link href="./static/css/vendor/video-js.css" rel="stylesheet" />
-
-		<!-- For when you want to add a mini player for samples
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.3/howler.min.js" integrity="sha512-6+YN/9o9BWrk6wSfGxQGpt3EUK6XeHi6yeHV+TYD2GR0Sj/cggRpXr1BrAQf0as6XslxomMUxXp2vIl+fv0QRA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    -->
-
-		<meta name="theme-color" content="#fafafa" />
-	</head>
-
-	<body>
-		<!--[if IE]>
-		<p class="browserupgrade">
-			You are using an <strong>outdated</strong> browser. Please
-			<a href="https://browsehappy.com/">upgrade your browser</a> to improve
-			your experience and security.
-		</p>
-		<![endif]-->
-
-		<!-- Site Navigation -->
-		<div
-			id="nav-container"
-			class="nav-container w-screen fixed border-1-bottom"
-		>
-			<div class="container mx-auto">
-				<nav class="flex items-center justify-between flex-wrap p-6">
-					<div
-						class="flex items-center flex-shrink-0 text-gray-200 mr-6"
-					>
-						<span class="text-xl">MEDIMUSE</span>
-					</div>
-					<div class="flex-grow lg:flex lg:items-center lg:w-auto">
-						<div class="text-sm lg:flex-grow">
-							<a
-								href="#about-section"
-								class="mt-4 lg:inline-block lg:mt-0 text-gray-400 hover:text-white mr-4"
-							>
-								About
-							</a>
-							<a
-								href="#app-section"
-								class="mt-4 lg:inline-block lg:mt-0 text-gray-400 hover:text-white mr-4"
-							>
-								StateSong
-							</a>
-							<a
-								href="#contact-section"
-								class="mt-4 lg:inline-block lg:mt-0 text-gray-400 hover:text-white"
-							>
-								Contact
-							</a>
-						</div>
-					</div>
-				</nav>
-			</div>
-		</div>
-
-		<VideoHero />
-		<AboutSection />
-		<StateSongSection />
-		<ContactSection />
-
-		<Footer />
-
-		<script src="./static/js/vendor/scrollMonitor.js" is:inline></script>
-		<script
-			src="./static/js/vendor/smooth-scroll.polyfills.min.js"
-			is:inline
-		></script>
-		<script src="./static/js/vendor/video.js" is:inline></script>
-		<script src="./static/js/main.js" is:inline></script>
-	</body>
-</html>
+<PageTemplate title={title} description={description} themeColor={themeColor}>
+	<Navigation />
+	<VideoHero />
+	<AboutSection />
+	<StateSongSection />
+	<ContactSection />
+	<Footer />
+</PageTemplate>

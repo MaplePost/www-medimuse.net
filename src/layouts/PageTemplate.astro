@@ -1,0 +1,37 @@
+---
+// PageTemplate for MEDIMUSE.net
+import "@fontsource/montserrat";
+const { title, description, themeColor } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html class="flex flex-col w-full h-full flex-grow no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content={themeColor} />
+    <link href="./static/css/vendor/video-js.css" rel="stylesheet" />
+    <!-- For when you want to add a mini player for samples
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.3/howler.min.js" integrity="sha512-6+YN/9o9BWrk6wSfGxQGpt3EUK6XeHi6yeHV+TYD2GR0Sj/cggRpXr1BrAQf0as6XslxomMUxXp2vIl+fv0QRA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    -->
+  </head>
+
+  <body class="flex flex-col flex-grow w-full min-h-screen bg-slate-100">
+    <!--[if IE]>
+      <p class="browserupgrade">
+        You are using an <strong>outdated</strong> browser. Please
+        <a href="https://browsehappy.com/">upgrade your browser</a> to improve
+        your experience and security.
+      </p>
+		<![endif]-->
+    <slot />
+
+    <script src="./static/js/vendor/scrollMonitor.js" is:inline></script>
+    <script src="./static/js/vendor/smooth-scroll.polyfills.min.js" is:inline
+    ></script>
+    <script src="./static/js/vendor/video.js" is:inline></script>
+    <script src="./static/js/main.js" is:inline></script>
+  </body>
+</html>

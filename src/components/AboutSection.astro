@@ -6,130 +6,121 @@ import Divider from "../components/Divider.astro";
 ---
 
 <!-- About -->
-<div id="about-section" class="w-screen section-container">
-    <div class="container box-border mx-auto item-full-height p-6">
-        <div class="pb-12">
-            <div class="mb-8">
-                <h1 class="text-gray-900 mb-2">About StateSong Technology</h1>
+<div id="about-section" class="container mx-auto p-8 pt-24 md:pt-36 pb-12">
+    <!-- About StateSong -->
+    <p
+        class="text-gray-600 text-lg md:text-2xl leading-none font-montserrat pb-4 md:pb-6 font-bold"
+    >
+        About StateSong Technology
+    </p>
+    <p class="text-gray-700 text-base font-montserrat mt-2">
+        StateSong is a patented technology that converts biological data into
+        music. The idea? Capture and record a muscial rendition of a targeted
+        state, say calm or focused. Then, replay it to bring your mind and body
+        into that state. Using StateSong as a biofeedback tool, we can entrain
+        our minds and bodies towards deeper states of calm, focus, sleep,
+        exercise, even happiness.
+    </p>
+
+    <Divider styles="pt-12 pb-12" />
+
+    <!-- About StateSong - Details -->
+    <div class="container flex flex-row flex-wrap w-full font-montserrat">
+        <div
+            class="flex flex-col w-full md:w-1/3 p-4 pt-0 md:pt-4 pb-6 md:pb-0"
+        >
+            <div class="pb-6 md:pb-8">
+                <img
+                    class="object-cover w-full"
+                    src="./static/img/GetAppLink.jpg"
+                    alt="StateSong App"
+                />
             </div>
-            <p class="text-gray-700 text-base mt-4 mb-8">
-                StateSong is a patented technology that converts biological data
-                into music. The idea? Capture and record a muscial rendition of
-                a targeted state, say calm or focused. Then, replay it to bring
-                your mind and body into that state. Using StateSong as a
-                biofeedback tool, we can entrain our minds and bodies towards
-                deeper states of calm, focus, sleep, exercise, even happiness.
+            <p
+                class="text-gray-600 text-base md:text-md font-bold pb-2 md:pb-4"
+            >
+                StateSong Apps, APIs & Platform
+            </p>
+            <p class="text-gray-700">
+                The StateSong App will allow YOU to convert the data captured
+                from your biometric devices (ie smart watch) and transform it
+                into music that represents YOUR best states of mind and body.
+                StateSong APIs and Libraries let you to build Apps and UIs. The
+                Cloud Platform will empower you to create and share music that
+                is 'endogenously' YOU.
             </p>
         </div>
-
-        <Divider />
-
-        <!--Start Content-->
-        <div class="flex flex-col md:flex-row">
-            <!-- Col 1 -->
-            <div class="flex-1 m-1">
-                <div class="square">
-                    <div class="s-content">
-                        <img
-                            class="object-cover w-full h-full"
-                            src="./static/img/GetAppLink.jpg"
-                            alt="StateSong App"
-                        />
-                    </div>
-                </div>
-                <div class="px-2 py-4">
-                    <h2 class="text-gray-900 mb-2">
-                        StateSong Apps, APIs & Platform
-                    </h2>
-                    <p class="text-gray-700">
-                        The StateSong App will allow YOU to convert the data
-                        captured from your biometric devices (ie smart watch)
-                        and transform it into music that represents YOUR best
-                        states of mind and body. StateSong APIs and Libraries
-                        let you to build Apps and UIs. The Cloud Platform will
-                        empower you to create and share music that is
-                        'endogenously' YOU.
-                    </p>
-                </div>
+        <div class="flex flex-col w-full md:w-1/3 p-4">
+            <div class="pb-6 md:pb-8">
+                <img
+                    class="object-cover w-full h-full"
+                    src="./static/img/HealthSportsMusic.jpg"
+                    alt="StateSong for Wellness, Sports and Music"
+                />
             </div>
-            <!-- Col 2 -->
-            <div class="flex-1 m-1">
-                <div class="square">
-                    <div class="s-content">
-                        <img
-                            class="object-cover w-full h-full"
-                            src="./static/img/HealthSportsMusic.jpg"
-                            alt="StateSong for Wellness, Sports and Music"
-                        />
-                    </div>
-                </div>
-                <div class="px-2 py-4">
-                    <h2 class="text-gray-900 mb-2">
-                        Health, Sports & Music Uses
-                    </h2>
-                    <p class="text-gray-700">
-                        Ron, who suffers from PTSD, listens to his CalmSong to
-                        reduce anxiety and stay calm.
-                    </p>
-                    <p class="text-gray-700 text-base mt-2">
-                        Pat, a distance runner, recorded her 2ndWindSong to get
-                        her there sooner and stay in it longer.
-                    </p>
-                    <p class="text-gray-700 text-base mt-2">
-                        Jen uses StateSong to make music for movie & TV scores
-                        with a plugin that imports biometric data.
-                    </p>
-                </div>
-            </div>
-            <!-- Col 3 -->
-            <div class="flex-1 m-1">
-                <div class="square">
-                    <div class="s-content">
-                        <img
-                            class="object-cover w-full h-full"
-                            src="./static/img/PianoRoll.jpg"
-                            alt="OpenSource Development"
-                        />
-                    </div>
-                </div>
-                <div class="px-2 py-4">
-                    <h2 class="text-gray-900 mb-2">Open Source Community</h2>
-                    <p class="text-gray-700">
-                        MediMuse is excited to offer OpenSource access for
-                        techies and creatives to envision and develop User
-                        Interfaces that leverage the power and flexibility of
-                        StateSong's 'Core Technology'. If StateSong tech
-                        resonates with you, join the MediMuse Community "here"
-                        to get started with the Sound Production platform of the
-                        future!
-                    </p>
-                </div>
-            </div>
-        </div>
-        <!--End Content-->
-
-        <Divider />
-
-        <!--Start Content-->
-        <div class="pb-12 mb-12">
-            <div class="mb-8 mt-12">
-                <h1 class="text-gray-900 mb-2">About MediMuse LLC</h1>
-            </div>
-            <p class="text-gray-700 text-base mt-4 mb-8">
-                MediMuse merges biometric data from your smart devices with
-                audio tools, allowing you to create, listen, and share Music
-                created from YOUR body.
+            <p
+                class="text-gray-600 text-base md:text-md font-bold pb-2 md:pb-4"
+            >
+                Health, Sports & Music Uses
             </p>
-            <p class="text-gray-700 text-base mt-2">
-                MediMuse is delivering what may be the most profoundly impacting
-                biofeedback system and tools developed to date. MediMuse's
-                StateSong technology converts YOUR body's data, while in
-                different states, into music (i.e. relaxed, aware, 2nd wind,
-                etc), then feeds it back to you, inviting YOUR body towards it's
-                best states.
+            <ul class="list-disc pl-4 pr-0">
+                <li class="text-gray-700 text-base">
+                    Ron, who suffers from PTSD, listens to his CalmSong to
+                    reduce anxiety and stay calm.
+                </li>
+                <li class="text-gray-700 text-base">
+                    Pat, a distance runner, recorded her 2ndWindSong to get her
+                    there sooner and stay in it longer.
+                </li>
+                <li class="text-gray-700 text-base">
+                    Jen uses StateSong to make music for movie & TV scores with
+                    a plugin that imports biometric data.
+                </li>
+            </ul>
+        </div>
+        <div class="flex flex-col w-full md:w-1/3 p-4">
+            <div class="pb-6 md:pb-8">
+                <img
+                    class="object-cover w-full h-full"
+                    src="./static/img/PianoRoll.jpg"
+                    alt="OpenSource Development"
+                />
+            </div>
+            <p
+                class="text-gray-600 text-base md:text-md font-bold pb-2 md:pb-4"
+            >
+                Open Source Community
+            </p>
+            <p class="text-gray-700">
+                MediMuse is excited to offer OpenSource access for techies and
+                creatives to envision and develop User Interfaces that leverage
+                the power and flexibility of StateSong's 'Core Technology'. If
+                StateSong tech resonates with you, join the MediMuse Community
+                "here" to get started with the Sound Production platform of the
+                future!
             </p>
         </div>
-        <!--End Content-->
     </div>
+
+    <Divider styles="pt-12 pb-12" />
+
+    <!-- About MediMuse -->
+    <p
+        class="text-gray-600 text-lg md:text-2xl leading-none font-montserrat pb-4 md:pb-6 font-bold"
+    >
+        About MediMuse LLC
+    </p>
+    <p class="text-gray-700 text-base font-montserrat mt-2">
+        MediMuse merges biometric data from your smart devices with audio tools,
+        allowing you to create, listen, and share Music created from YOUR body.
+    </p>
+    <p class="text-gray-700 text-base font-montserrat mt-2">
+        MediMuse is delivering what may be the most profoundly impacting
+        biofeedback system and tools developed to date. MediMuse's StateSong
+        technology converts YOUR body's data, while in different states, into
+        music (i.e. relaxed, aware, 2nd wind, etc), then feeds it back to you,
+        inviting YOUR body towards it's best states.
+    </p>
 </div>
+
 <!-- End About -->

@@ -6,171 +6,199 @@ import Divider from "../components/Divider.astro";
 ---
 
 <!-- StateSong -->
-<div id="app-section" class="w-screen bg-gray-200 section-container">
-    <div class="container box-border mx-auto item-full-height p-6">
-        <div class="pb-12">
-            <div class="font-bold mb-8">
-                <h1 class="text-gray-900 mb-2">StateSong Samples</h1>
-            </div>
-            <p class="text-gray-700 text-base mt-4 mb-8">
-                Click on the following activities and states to hear sample
-                StateSongs:<br />
+<div id="app-section" class="bg-gray-200">
+    <div class="container mx-auto p-8 pt-24 md:pt-36 pb-24">
+        <p
+            class="text-gray-600 text-lg md:text-2xl leading-none font-montserrat pb-4 md:pb-6 font-bold"
+        >
+            StateSong Samples
+        </p>
+        <p class="text-gray-700 text-base font-montserrat mt-2">
+            Click on the following activities and states to hear sample
+            StateSongs:
+        </p>
+        <p class="text-gray-500 text-xs font-montserrat leading-none">
+            opens in a new tab
+        </p>
+        <ul class="list-disc pt-4 pl-4 pr-0 text-cyan-700">
+            <li>
                 <a
-                    class="inline-a"
+                    class="underline"
                     href="./static/media/samples/at_peace.mp3"
                     target="_blank">Meditating</a
-                >,
+                >
+            </li>
+            <li>
                 <a
-                    class="inline-a"
+                    class="underline"
                     href="./static/media/samples/out_2_run.mp3"
                     target="_blank">running</a
-                >,
+                >
+            </li>
+            <li>
                 <a
-                    class="inline-a"
+                    class="underline"
                     href="./static/media/samples/TV_Spies.mp3"
                     target="_blank">watching TV</a
-                >,
+                >
+            </li>
+            <li>
                 <a
-                    class="inline-a"
+                    class="underline"
                     href="./static/media/samples/heavy_thinking.mp3"
                     target="_blank">studying</a
-                >,
+                >
+            </li>
+            <li>
                 <a
-                    class="inline-a"
+                    class="underline"
                     href="./static/media/samples/heavy_thinking.mp3"
                     target="_blank">day dreaming</a
-                >,
+                >
+            </li>
+            <li>
                 <a
-                    class="inline-a"
+                    class="underline"
                     href="./static/media/samples/working.mp3"
                     target="_blank">gardening</a
-                >,
+                >
+            </li>
+            <li>
                 <a
-                    class="inline-a"
+                    class="underline"
                     href="./static/media/samples/explore.mp3"
                     target="_blank">exploring</a
-                > &
+                >
+            </li>
+            <li>
                 <a
-                    class="inline-a"
+                    class="underline"
                     href="./static/media/samples/weirdness.mp3"
                     target="_blank">funny moods</a
-                >.
-                <br />These samples were converted from biometric data to music
-                using the Statesong app. Now you can hear what YOUR states,
-                moods and activities sound like.
-            </p>
-        </div>
-
-        <Divider />
-
-        <div class="pb-12">
-            <div class="font-bold mb-8">
-                <h1 class="text-gray-900 mb-2">StateSong News</h1>
-            </div>
-            <p class="text-gray-700 text-base mt-4 mb-8">
-                Empatica Blog: <a
-                    class="inline-a"
-                    href="https://www.empatica.com/blog/statesong-converting-human-data-to-music-using-the-e4.html"
-                    target="_blank"
-                    >Converting Human Data to Music Using the E4</a
                 >
-                "... StateSong, which in combination with the E4, records and converts
-                biometric data from the wrist as music to help improve peoples' states
-                over time." -
-                <a
-                    class="inline-a"
-                    href="https://www.empatica.com/"
-                    target="_blank">Empatica</a
-                >, creator of the
-                <a
-                    class="inline-a"
-                    href="https://www.empatica.com/research/e4/"
-                    target="_blank"
-                >
-                    E4</a
-                >, a R&D/Medical grade 5 biometric wrist device,
-            </p>
-        </div>
+            </li>
+        </ul>
+        <p class="text-gray-700 text-base font-montserrat pt-6">
+            These samples were converted from biometric data to music using the
+            Statesong app. Now you can hear what YOUR states, moods and
+            activities sound like.
+        </p>
 
-        <Divider />
+        <Divider styles="pt-12 pb-12" />
 
-        <div class="pb-12">
-            <div class="font-bold mb-8">
-                <h1 class="text-gray-900 mb-2">StateSong Downloads</h1>
-            </div>
-            <p class="text-gray-700 text-base mt-4 mb-8">
-                LISTEN! You're Made of Music!!! StateSong apps lets you hear
-                your 'states' as music. As you listen to YOUR StateSongs, you
-                are synchronized with your best states. Download the
-                <a
-                    class="inline-a"
-                    href="https://play.google.com/store/apps/details?id=medimuse.com.statesong"
-                    target="_blank">StateSong Beta (Google Play)</a
-                > &
-                <a
-                    class="inline-a"
-                    href="./static/media/StateSongManual.pdf"
-                    target="_blank">StateSong User Guide</a
-                >.
-            </p>
-        </div>
+        <p
+            class="text-gray-600 text-lg md:text-2xl leading-none font-montserrat pb-4 md:pb-6 font-bold"
+        >
+            StateSong News
+        </p>
+        <p class="text-gray-700 text-base font-montserrat mt-2">
+            Click on the following activities and states to hear sample
+            StateSongs:
+        </p>
+        <p class="text-gray-700 text-base mt-4 mb-8">
+            Empatica Blog:
+            <a
+                class="text-cyan-700 underline"
+                href="https://www.empatica.com/blog/statesong-converting-human-data-to-music-using-the-e4.html"
+                target="_blank"
+            >
+                Converting Human Data to Music Using the E4
+            </a>
+            "... StateSong, which in combination with the E4, records and converts
+            biometric data from the wrist as music to help improve peoples' states
+            over time." -
+            <a
+                class="text-cyan-700 underline"
+                href="https://www.empatica.com/"
+                target="_blank"
+            >
+                Empatica
+            </a>, creator of the
+            <a
+                class="text-cyan-700 underline"
+                href="https://www.empatica.com/research/e4/"
+                target="_blank"
+            >
+                E4
+            </a>, a R&D/Medical grade 5 biometric wrist device,
+        </p>
 
-        <Divider />
+        <Divider styles="pt-12 pb-12" />
 
-        <div class="pb-12">
-            <div class="font-bold mb-8">
-                <h1 class="text-gray-900 text-l mb-2">
-                    StateSong Cloud Platform
-                </h1>
-            </div>
-            <p class="text-gray-700 text-base mt-4 mb-8">
-                Create & Share StateSongs on the StateSong Cloud. More coming
-                soon!!
-            </p>
-        </div>
+        <p
+            class="text-gray-600 text-lg md:text-2xl leading-none font-montserrat pb-4 md:pb-6 font-bold"
+        >
+            StateSong Downloads
+        </p>
+        <p class="text-gray-700 text-base font-montserrat mt-2">
+            LISTEN! You're Made of Music!!! StateSong apps lets you hear your
+            'states' as music. As you listen to YOUR StateSongs, you are
+            synchronized with your best states. Download the
+            <a
+                class="text-cyan-700 underline"
+                href="https://play.google.com/store/apps/details?id=medimuse.com.statesong"
+                target="_blank"
+            >
+                StateSong Beta (Google Play)
+            </a>
+            &
+            <a
+                class="text-cyan-700 underline"
+                href="./static/media/StateSongManual.pdf"
+                target="_blank"
+            >
+                StateSong User Guide
+            </a>.
+        </p>
 
-        <Divider />
+        <Divider styles="pt-12 pb-12" />
 
-        <div class="pb-12">
-            <div class="font-bold mb-8">
-                <h1 class="text-gray-900 text-l mb-2">StateSong SDK, APIs</h1>
-            </div>
-            <p class="text-gray-700 text-base mt-4 mb-8">
-                Our SDK provides licensed access to a toolkit of libraries,
-                apis, and plugins so you can leverage the power of the StateSong
-                core technology.
-            </p>
-        </div>
+        <p
+            class="text-gray-600 text-lg md:text-2xl leading-none font-montserrat pb-4 md:pb-6 font-bold"
+        >
+            StateSong Cloud Platform
+        </p>
+        <p class="text-gray-700 text-base font-montserrat mt-2">
+            Create & Share StateSongs on the StateSong Cloud. More coming soon!!
+        </p>
 
-        <Divider />
+        <Divider styles="pt-12 pb-12" />
 
-        <div class="pb-12">
-            <div class="font-bold mb-8">
-                <h1 class="text-gray-900 text-l mb-2">
-                    StateSong OpenSource UI
-                </h1>
-            </div>
-            <p class="text-gray-700 text-base mt-4 mb-8">
-                MediMuse provides OpenSource access to StateSong technology so
-                YOU can development UIs and apps for health & wellness, sports,
-                and music production.
-            </p>
-        </div>
+        <p
+            class="text-gray-600 text-lg md:text-2xl leading-none font-montserrat pb-4 md:pb-6 font-bold"
+        >
+            StateSong SDK, APIs
+        </p>
+        <p class="text-gray-700 text-base font-montserrat mt-2">
+            Our SDK provides licensed access to a toolkit of libraries, apis,
+            and plugins so you can leverage the power of the StateSong core
+            technology.
+        </p>
 
-        <Divider />
+        <Divider styles="pt-12 pb-12" />
 
-        <div class="pb-12">
-            <div class="font-bold mb-8">
-                <h1 class="text-gray-900 text-l mb-2">StateSong Community</h1>
-            </div>
-            <p class="text-gray-700 text-base mt-4 mb-8">
-                If the intent and opportunities of StateSong Technology
-                resonates with you, tell us about yourself in an email to
-                community@medimuse.net.
-            </p>
-        </div>
+        <p
+            class="text-gray-600 text-lg md:text-2xl leading-none font-montserrat pb-4 md:pb-6 font-bold"
+        >
+            StateSong OpenSource UI
+        </p>
+        <p class="text-gray-700 text-base font-montserrat mt-2">
+            MediMuse provides OpenSource access to StateSong technology so YOU
+            can development UIs and apps for health & wellness, sports, and
+            music production.
+        </p>
 
-        <Divider />
+        <Divider styles="pt-12 pb-12" />
+
+        <p
+            class="text-gray-600 text-lg md:text-2xl leading-none font-montserrat pb-4 md:pb-6 font-bold"
+        >
+            StateSong Community
+        </p>
+        <p class="text-gray-700 text-base font-montserrat mt-2">
+            If the intent and opportunities of StateSong Technology resonates
+            with you, tell us about yourself in an email to
+            community@medimuse.net.
+        </p>
     </div>
 </div>
-<!-- End StateSong -->

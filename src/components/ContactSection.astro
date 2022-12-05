@@ -2,58 +2,41 @@
 // Component:
 // Contact section
 
-import Divider from "../components/Divider.astro";
 ---
 
 <!-- Contact -->
-<div id="contact-section" class="w-screen bg-gray-900 section-container">
-    <div class="container box-border mx-auto item-full-height">
-        <!-- Contact content -->
-        <div class="flex flex-col md:items-center">
-            <!-- Contanct title -->
-            <div class="flex flex-row items-stretch px-6 py-12">
-                <h1 class="text-gray-400">Contact MediMuse</h1>
+<div id="contact-section" class="bg-gray-900 min-h-screen">
+    <div
+        class="container flex flex-col items-center justify-center mx-auto p-8 pt-24 md:pt-0 min-h-screen"
+    >
+        <p
+            class="w-full text-gray-400 text-lg md:text-2xl leading-none font-montserrat pb-12 md:pb-24 font-bold md:text-center"
+        >
+            Contact MediMuse
+        </p>
+        <!-- Contact - Details -->
+        <div class="container flex flex-row flex-wrap w-full font-montserrat">
+            <div
+                class="flex flex-col w-full md:w-1/3 p-4 pt-0 md:pt-4 pb-6 md:pb-0"
+            >
+                <p class="text-gray-400 font-bold text-lg mb-2">Robert Joseph:</p>
+                <p class="text-gray-400 text-base">Business</p>
+                <p class="text-gray-400 text-base">rjoseph@medimuse.net</p>
             </div>
-
-            <!-- Contact items -->
-            <div class="flex flex-col md:flex-row">
-                <!-- Contact item 1 -->
-                <div class="flex-1 px-4 py-2 m-2">
-                    <div class="px-6 py-4">
-                        <h1 class="text-gray-400 text-l mb-2">
-                            Robert Joseph: Business
-                        </h1>
-                        <p class="text-gray-400 text-base">
-                            rjoseph@medimuse.net
-                        </p>
-                    </div>
-                </div>
-                <!-- Contact item 2 -->
-                <div class="flex-1 px-4 py-2 m-2">
-                    <div class="px-6 py-4">
-                        <h1 class="text-gray-400 text-l mb-2">
-                            Peter J. Slack: Technology
-                        </h1>
-                        <p class="text-gray-400 text-base">
-                            pslack@medimuse.net
-                        </p>
-                    </div>
-                </div>
-                <!-- Contact item 3 -->
-                <div class="flex-1 px-4 py-2 m-2">
-                    <div class="px-6 py-4">
-                        <h1 class="text-gray-400 text-l mb-2">
-                            Our Community: Join the Collective
-                        </h1>
-                        <p class="text-gray-400 text-base">
-                            community@medimuse.net
-                        </p>
-                    </div>
-                </div>
+            <div
+                class="flex flex-col w-full md:w-1/3 p-4 pt-0 md:pt-4 pb-6 md:pb-0"
+            >
+                <p class="text-gray-400 font-bold text-lg mb-2">Peter J. Slack:</p>
+                <p class="text-gray-400 text-base">Technology</p>
+                <p class="text-gray-400 text-base">pslack@medimuse.net</p>
             </div>
-            <!-- End Contact items -->
+            <div
+                class="flex flex-col w-full md:w-1/3 p-4 pt-0 md:pt-4 pb-6 md:pb-0"
+            >
+                <p class="text-gray-400 font-bold text-lg mb-2">Our Community:</p>
+                <p class="text-gray-400 text-base">Join the Collective</p>
+                <p class="text-gray-400 text-base">community@medimuse.net</p>
+            </div>
         </div>
-        <!-- End Contact content -->
     </div>
 </div>
-<!-- End Contact -->
