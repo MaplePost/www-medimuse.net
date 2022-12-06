@@ -1,15 +1,339 @@
 <!DOCTYPE html>
-<html lang="en">
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width">
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg">
-		<meta name="generator" content="Astro v1.6.11">
-		<title></title>
-	<link rel="stylesheet" href="/www-medimuse.net/assets/index.3ef48ba2.css" /></head>
+<html class="flex flex-col w-full h-full flex-grow no-js" lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>MediMuse.Net - 2022</title>
+    <meta name="description" content="Developer and Artifact repository for MediMuse Software.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#FAFAFA">
+    <link href="./static/css/vendor/video-js.css" rel="stylesheet">
+    <!-- For when you want to add a mini player for samples
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.3/howler.min.js" integrity="sha512-6+YN/9o9BWrk6wSfGxQGpt3EUK6XeHi6yeHV+TYD2GR0Sj/cggRpXr1BrAQf0as6XslxomMUxXp2vIl+fv0QRA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    -->
+  <link rel="stylesheet" href="/assets/index.dcf1ef81.css" /><script type="module" src="/hoisted.f29437c4.js"></script></head>
 
-	<body>
-		<div class="grid place-items-center h-screen content-center">
-			<p>Temporary</p>
-		</div>
-	</body></html>
+  <body class="flex flex-col flex-grow w-full min-h-screen bg-slate-100">
+    <!--[if IE]>
+      <p class="browserupgrade">
+        You are using an <strong>outdated</strong> browser. Please
+        <a href="https://browsehappy.com/">upgrade your browser</a> to improve
+        your experience and security.
+      </p>
+		<![endif]-->
+    <!-- Site Navigation --><nav class="fixed w-full h-12 md:h-16 bg-neutral-900 z-50">
+    <div class="container flex flex-row w-full mx-auto h-full items-center">
+        <p class="ml-3 md:ml-6 text-xl text-gray-200">MEDIMUSE</p>
+        <div class="ml-3 md:ml-6">
+            <a href="#about-section" class="mr-2 md:mr-4 text-sm md:text-base text-gray-400 hover:text-white">
+                About
+            </a>
+            <a href="#app-section" class="mr-2 md:mr-4 text-sm md:text-base text-gray-400 hover:text-white">
+                StateSong
+            </a>
+            <a href="#contact-section" class="text-sm md:text-base text-gray-400 hover:text-white">
+                Contact
+            </a>
+        </div>
+    </div>
+</nav><div id="home-section" class="min-h-screen w-full h-full border-b bg-black" style="height:100vh;">
+    <video id="hero-video" class="video-js vjs-big-play-centered" controls preload="auto" fill="true" data-setup="{}">
+        <source src="./static/media/StateSong_05s.mp4" type="video/mp4">
+        <p class="vjs-no-js">
+            To view this video please enable JavaScript, and consider upgrading
+            to a web browser that
+            <a href="https://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
+        </p>
+    </video>
+</div><!-- About --><div id="about-section" class="container mx-auto p-8 pt-24 md:pt-36 pb-12">
+    <!-- About StateSong -->
+    <p class="text-gray-600 text-lg md:text-2xl leading-none font-montserrat pb-4 md:pb-6 font-bold">
+        About StateSong Technology
+    </p>
+    <p class="text-gray-700 text-base font-montserrat mt-2">
+        StateSong is a patented technology that converts biological data into
+        music. The idea? Capture and record a muscial rendition of a targeted
+        state, say calm or focused. Then, replay it to bring your mind and body
+        into that state. Using StateSong as a biofeedback tool, we can entrain
+        our minds and bodies towards deeper states of calm, focus, sleep,
+        exercise, even happiness.
+    </p>
+
+    <div class="pt-12 pb-12">
+    <div class="relative border-b border-cyan-800 border-opacity-25">
+        <span class="relative top-px block w-12 h-px bg-orange-400"></span>
+    </div>
+</div>
+
+    <!-- About StateSong - Details -->
+    <div class="container flex flex-row flex-wrap w-full font-montserrat">
+        <div class="flex flex-col w-full md:w-1/3 p-4 pt-0 md:pt-4 pb-6 md:pb-0">
+            <div class="pb-6 md:pb-8">
+                <img class="object-cover w-full" src="./static/img/GetAppLink.jpg" alt="StateSong App">
+            </div>
+            <p class="text-gray-600 text-base md:text-md font-bold pb-2 md:pb-4">
+                StateSong Apps, APIs & Platform
+            </p>
+            <p class="text-gray-700">
+                The StateSong App will allow YOU to convert the data captured
+                from your biometric devices (ie smart watch) and transform it
+                into music that represents YOUR best states of mind and body.
+                StateSong APIs and Libraries let you to build Apps and UIs. The
+                Cloud Platform will empower you to create and share music that
+                is 'endogenously' YOU.
+            </p>
+        </div>
+        <div class="flex flex-col w-full md:w-1/3 p-4">
+            <div class="pb-6 md:pb-8">
+                <img class="object-cover w-full h-full" src="./static/img/HealthSportsMusic.jpg" alt="StateSong for Wellness, Sports and Music">
+            </div>
+            <p class="text-gray-600 text-base md:text-md font-bold pb-2 md:pb-4">
+                Health, Sports & Music Uses
+            </p>
+            <ul class="list-disc pl-4 pr-0">
+                <li class="text-gray-700 text-base">
+                    Ron, who suffers from PTSD, listens to his CalmSong to
+                    reduce anxiety and stay calm.
+                </li>
+                <li class="text-gray-700 text-base">
+                    Pat, a distance runner, recorded her 2ndWindSong to get her
+                    there sooner and stay in it longer.
+                </li>
+                <li class="text-gray-700 text-base">
+                    Jen uses StateSong to make music for movie & TV scores with
+                    a plugin that imports biometric data.
+                </li>
+            </ul>
+        </div>
+        <div class="flex flex-col w-full md:w-1/3 p-4">
+            <div class="pb-6 md:pb-8">
+                <img class="object-cover w-full h-full" src="./static/img/PianoRoll.jpg" alt="OpenSource Development">
+            </div>
+            <p class="text-gray-600 text-base md:text-md font-bold pb-2 md:pb-4">
+                Open Source Community
+            </p>
+            <p class="text-gray-700">
+                MediMuse is excited to offer OpenSource access for techies and
+                creatives to envision and develop User Interfaces that leverage
+                the power and flexibility of StateSong's 'Core Technology'. If
+                StateSong tech resonates with you, join the MediMuse Community
+                "here" to get started with the Sound Production platform of the
+                future!
+            </p>
+        </div>
+    </div>
+
+    <div class="pt-12 pb-12">
+    <div class="relative border-b border-cyan-800 border-opacity-25">
+        <span class="relative top-px block w-12 h-px bg-orange-400"></span>
+    </div>
+</div>
+
+    <!-- About MediMuse -->
+    <p class="text-gray-600 text-lg md:text-2xl leading-none font-montserrat pb-4 md:pb-6 font-bold">
+        About MediMuse LLC
+    </p>
+    <p class="text-gray-700 text-base font-montserrat mt-2">
+        MediMuse merges biometric data from your smart devices with audio tools,
+        allowing you to create, listen, and share Music created from YOUR body.
+    </p>
+    <p class="text-gray-700 text-base font-montserrat mt-2">
+        MediMuse is delivering what may be the most profoundly impacting
+        biofeedback system and tools developed to date. MediMuse's StateSong
+        technology converts YOUR body's data, while in different states, into
+        music (i.e. relaxed, aware, 2nd wind, etc), then feeds it back to you,
+        inviting YOUR body towards it's best states.
+    </p>
+</div>
+
+<!-- End About --><!-- StateSong --><div id="app-section" class="bg-gray-200">
+  <div class="container mx-auto p-8 pt-24 md:pt-36 pb-24">
+    <p class="text-gray-600 text-lg md:text-2xl leading-none font-montserrat pb-4 md:pb-6 font-bold">
+      StateSong Samples
+    </p>
+    <p class="text-gray-700 text-base font-montserrat mt-2">
+      Click on the following activities and states to hear sample StateSongs:
+    </p>
+    <p class="text-gray-500 text-xs font-montserrat leading-none">
+      opens in a new tab
+    </p>
+    <ul class="list-none pt-4 pl-4 pr-0 text-cyan-700">
+      <li>
+        <div class="inline-flex flex-row bg-white rounded p-2 items-center">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="{2}" viewBox="0 0 24 24" height="1em" width="1em" id="audio_1" class="cursor-pointer w-8 h-8 p-2 mr-2 bg-orange-400 text-zinc-50 rounded">
+  <path stroke="none" d="M0 0h24v24H0z" ></path>
+  <path d="M7 4v16l13-8z" ></path>
+</svg>
+          <a class="underline" href="./static/media/samples/at_peace.mp3" target="_blank">Meditating</a>
+        </div>
+      </li>
+      <li>
+        <a class="underline" href="./static/media/samples/out_2_run.mp3" target="_blank">running</a>
+      </li>
+      <li>
+        <a class="underline" href="./static/media/samples/TV_Spies.mp3" target="_blank">watching TV</a>
+      </li>
+      <li>
+        <a class="underline" href="./static/media/samples/heavy_thinking.mp3" target="_blank">studying</a>
+      </li>
+      <li>
+        <a class="underline" href="./static/media/samples/heavy_thinking.mp3" target="_blank">day dreaming</a>
+      </li>
+      <li>
+        <a class="underline" href="./static/media/samples/working.mp3" target="_blank">gardening</a>
+      </li>
+      <li>
+        <a class="underline" href="./static/media/samples/explore.mp3" target="_blank">exploring</a>
+      </li>
+      <li>
+        <a class="underline" href="./static/media/samples/weirdness.mp3" target="_blank">funny moods</a>
+      </li>
+    </ul>
+    <p class="text-gray-700 text-base font-montserrat pt-6">
+      These samples were converted from biometric data to music using the
+      Statesong app. Now you can hear what YOUR states, moods and activities
+      sound like.
+    </p>
+
+    <div class="pt-12 pb-12">
+    <div class="relative border-b border-cyan-800 border-opacity-25">
+        <span class="relative top-px block w-12 h-px bg-orange-400"></span>
+    </div>
+</div>
+
+    <p class="text-gray-600 text-lg md:text-2xl leading-none font-montserrat pb-4 md:pb-6 font-bold">
+      StateSong News
+    </p>
+    <p class="text-gray-700 text-base font-montserrat mt-2">
+      Click on the following activities and states to hear sample StateSongs:
+    </p>
+    <p class="text-gray-700 text-base mt-4 mb-8">
+      Empatica Blog:
+      <a class="text-cyan-700 underline" href="https://www.empatica.com/blog/statesong-converting-human-data-to-music-using-the-e4.html" target="_blank">
+        Converting Human Data to Music Using the E4
+      </a>
+      "... StateSong, which in combination with the E4, records and converts biometric
+      data from the wrist as music to help improve peoples' states over time." -
+      <a class="text-cyan-700 underline" href="https://www.empatica.com/" target="_blank">
+        Empatica
+      </a>, creator of the
+      <a class="text-cyan-700 underline" href="https://www.empatica.com/research/e4/" target="_blank">
+        E4
+      </a>, a R&D/Medical grade 5 biometric wrist device,
+    </p>
+
+    <div class="pt-12 pb-12">
+    <div class="relative border-b border-cyan-800 border-opacity-25">
+        <span class="relative top-px block w-12 h-px bg-orange-400"></span>
+    </div>
+</div>
+
+    <p class="text-gray-600 text-lg md:text-2xl leading-none font-montserrat pb-4 md:pb-6 font-bold">
+      StateSong Downloads
+    </p>
+    <p class="text-gray-700 text-base font-montserrat mt-2">
+      LISTEN! You're Made of Music!!! StateSong apps lets you hear your 'states'
+      as music. As you listen to YOUR StateSongs, you are synchronized with your
+      best states. Download the
+      <a class="text-cyan-700 underline" href="https://play.google.com/store/apps/details?id=medimuse.com.statesong" target="_blank">
+        StateSong Beta (Google Play)
+      </a>
+      &
+      <a class="text-cyan-700 underline" href="./static/media/StateSongManual.pdf" target="_blank">
+        StateSong User Guide
+      </a>.
+    </p>
+
+    <div class="pt-12 pb-12">
+    <div class="relative border-b border-cyan-800 border-opacity-25">
+        <span class="relative top-px block w-12 h-px bg-orange-400"></span>
+    </div>
+</div>
+
+    <p class="text-gray-600 text-lg md:text-2xl leading-none font-montserrat pb-4 md:pb-6 font-bold">
+      StateSong Cloud Platform
+    </p>
+    <p class="text-gray-700 text-base font-montserrat mt-2">
+      Create & Share StateSongs on the StateSong Cloud. More coming soon!!
+    </p>
+
+    <div class="pt-12 pb-12">
+    <div class="relative border-b border-cyan-800 border-opacity-25">
+        <span class="relative top-px block w-12 h-px bg-orange-400"></span>
+    </div>
+</div>
+
+    <p class="text-gray-600 text-lg md:text-2xl leading-none font-montserrat pb-4 md:pb-6 font-bold">
+      StateSong SDK, APIs
+    </p>
+    <p class="text-gray-700 text-base font-montserrat mt-2">
+      Our SDK provides licensed access to a toolkit of libraries, apis, and
+      plugins so you can leverage the power of the StateSong core technology.
+    </p>
+
+    <div class="pt-12 pb-12">
+    <div class="relative border-b border-cyan-800 border-opacity-25">
+        <span class="relative top-px block w-12 h-px bg-orange-400"></span>
+    </div>
+</div>
+
+    <p class="text-gray-600 text-lg md:text-2xl leading-none font-montserrat pb-4 md:pb-6 font-bold">
+      StateSong OpenSource UI
+    </p>
+    <p class="text-gray-700 text-base font-montserrat mt-2">
+      MediMuse provides OpenSource access to StateSong technology so YOU can
+      development UIs and apps for health & wellness, sports, and music
+      production.
+    </p>
+
+    <div class="pt-12 pb-12">
+    <div class="relative border-b border-cyan-800 border-opacity-25">
+        <span class="relative top-px block w-12 h-px bg-orange-400"></span>
+    </div>
+</div>
+
+    <p class="text-gray-600 text-lg md:text-2xl leading-none font-montserrat pb-4 md:pb-6 font-bold">
+      StateSong Community
+    </p>
+    <p class="text-gray-700 text-base font-montserrat mt-2">
+      If the intent and opportunities of StateSong Technology resonates with
+      you, tell us about yourself in an email to community@medimuse.net.
+    </p>
+  </div>
+</div>
+
+<!-- Contact --><div id="contact-section" class="bg-gray-900 min-h-screen">
+    <div class="container flex flex-col items-center justify-center mx-auto p-8 pt-24 md:pt-0 min-h-screen">
+        <p class="w-full text-gray-400 text-lg md:text-2xl leading-none font-montserrat pb-12 md:pb-24 font-bold md:text-center">
+            Contact MediMuse
+        </p>
+        <!-- Contact - Details -->
+        <div class="container flex flex-row flex-wrap w-full font-montserrat">
+            <div class="flex flex-col w-full md:w-1/3 p-4 pt-0 md:pt-4 pb-6 md:pb-0">
+                <p class="text-gray-400 font-bold text-lg mb-2">Robert Joseph:</p>
+                <p class="text-gray-400 text-base">Business</p>
+                <p class="text-gray-400 text-base">rjoseph@medimuse.net</p>
+            </div>
+            <div class="flex flex-col w-full md:w-1/3 p-4 pt-0 md:pt-4 pb-6 md:pb-0">
+                <p class="text-gray-400 font-bold text-lg mb-2">Peter J. Slack:</p>
+                <p class="text-gray-400 text-base">Technology</p>
+                <p class="text-gray-400 text-base">pslack@medimuse.net</p>
+            </div>
+            <div class="flex flex-col w-full md:w-1/3 p-4 pt-0 md:pt-4 pb-6 md:pb-0">
+                <p class="text-gray-400 font-bold text-lg mb-2">Our Community:</p>
+                <p class="text-gray-400 text-base">Join the Collective</p>
+                <p class="text-gray-400 text-base">community@medimuse.net</p>
+            </div>
+        </div>
+    </div>
+</div><!-- Footer --><div class="flex w-full bg-slate-300">
+    <div class="container mx-auto text-xs p-2">
+        <p>Copyright - © 2020-2022 MEDIMUSE LLC</p>
+    </div>
+</div>
+
+    <script src="./static/js/vendor/scrollMonitor.js"></script>
+    <script src="./static/js/vendor/smooth-scroll.polyfills.min.js"></script>
+    <script src="./static/js/vendor/video.js"></script>
+    <script src="./static/js/main.js"></script>
+  </body>
+</html>

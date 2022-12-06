@@ -2,203 +2,435 @@
 // Component:
 // StateSong section
 
+import Icon from "./Icon.astro";
 import Divider from "../components/Divider.astro";
 ---
 
 <!-- StateSong -->
 <div id="app-section" class="bg-gray-200">
-    <div class="container mx-auto p-8 pt-24 md:pt-36 pb-24">
-        <p
-            class="text-gray-600 text-lg md:text-2xl leading-none font-montserrat pb-4 md:pb-6 font-bold"
+  <div class="container mx-auto p-8 pt-24 md:pt-36 pb-24">
+    <p
+      class="text-gray-600 text-lg md:text-2xl leading-none font-montserrat pb-4 md:pb-6 font-bold"
+    >
+      StateSong Samples
+    </p>
+    <p class="text-gray-700 text-base font-montserrat mt-2 pb-2">
+      Click on the following activities and states to hear sample StateSongs:
+    </p>
+    <div class="flex flex-row flex-wrap pt-4 pl-4 pr-0 text-cyan-700">
+      <div class="m-1 inline-flex flex-row bg-white rounded p-2 items-center">
+        <Icon
+          id="audio_1"
+          class="cursor-pointer w-8 h-8 p-2 mr-2 bg-orange-400 text-zinc-50 rounded"
+          icon="IconPlay"
+        />
+        <a
+          class="underline"
+          href="./static/media/samples/at_peace.mp3"
+          target="_blank">Meditating</a
         >
-            StateSong Samples
-        </p>
-        <p class="text-gray-700 text-base font-montserrat mt-2">
-            Click on the following activities and states to hear sample
-            StateSongs:
-        </p>
-        <p class="text-gray-500 text-xs font-montserrat leading-none">
-            opens in a new tab
-        </p>
-        <ul class="list-disc pt-4 pl-4 pr-0 text-cyan-700">
-            <li>
-                <a
-                    class="underline"
-                    href="./static/media/samples/at_peace.mp3"
-                    target="_blank">Meditating</a
-                >
-            </li>
-            <li>
-                <a
-                    class="underline"
-                    href="./static/media/samples/out_2_run.mp3"
-                    target="_blank">running</a
-                >
-            </li>
-            <li>
-                <a
-                    class="underline"
-                    href="./static/media/samples/TV_Spies.mp3"
-                    target="_blank">watching TV</a
-                >
-            </li>
-            <li>
-                <a
-                    class="underline"
-                    href="./static/media/samples/heavy_thinking.mp3"
-                    target="_blank">studying</a
-                >
-            </li>
-            <li>
-                <a
-                    class="underline"
-                    href="./static/media/samples/heavy_thinking.mp3"
-                    target="_blank">day dreaming</a
-                >
-            </li>
-            <li>
-                <a
-                    class="underline"
-                    href="./static/media/samples/working.mp3"
-                    target="_blank">gardening</a
-                >
-            </li>
-            <li>
-                <a
-                    class="underline"
-                    href="./static/media/samples/explore.mp3"
-                    target="_blank">exploring</a
-                >
-            </li>
-            <li>
-                <a
-                    class="underline"
-                    href="./static/media/samples/weirdness.mp3"
-                    target="_blank">funny moods</a
-                >
-            </li>
-        </ul>
-        <p class="text-gray-700 text-base font-montserrat pt-6">
-            These samples were converted from biometric data to music using the
-            Statesong app. Now you can hear what YOUR states, moods and
-            activities sound like.
-        </p>
+      </div>
 
-        <Divider styles="pt-12 pb-12" />
-
-        <p
-            class="text-gray-600 text-lg md:text-2xl leading-none font-montserrat pb-4 md:pb-6 font-bold"
+      <div class="m-1 inline-flex flex-row bg-white rounded p-2 items-center">
+        <Icon
+          id="audio_2"
+          class="cursor-pointer w-8 h-8 p-2 mr-2 bg-orange-400 text-zinc-50 rounded"
+          icon="IconPlay"
+        />
+        <a
+          class="underline"
+          href="./static/media/samples/out_2_run.mp3"
+          target="_blank">running</a
         >
-            StateSong News
-        </p>
-        <p class="text-gray-700 text-base font-montserrat mt-2">
-            Click on the following activities and states to hear sample
-            StateSongs:
-        </p>
-        <p class="text-gray-700 text-base mt-4 mb-8">
-            Empatica Blog:
-            <a
-                class="text-cyan-700 underline"
-                href="https://www.empatica.com/blog/statesong-converting-human-data-to-music-using-the-e4.html"
-                target="_blank"
-            >
-                Converting Human Data to Music Using the E4
-            </a>
-            "... StateSong, which in combination with the E4, records and converts
-            biometric data from the wrist as music to help improve peoples' states
-            over time." -
-            <a
-                class="text-cyan-700 underline"
-                href="https://www.empatica.com/"
-                target="_blank"
-            >
-                Empatica
-            </a>, creator of the
-            <a
-                class="text-cyan-700 underline"
-                href="https://www.empatica.com/research/e4/"
-                target="_blank"
-            >
-                E4
-            </a>, a R&D/Medical grade 5 biometric wrist device,
-        </p>
+      </div>
 
-        <Divider styles="pt-12 pb-12" />
-
-        <p
-            class="text-gray-600 text-lg md:text-2xl leading-none font-montserrat pb-4 md:pb-6 font-bold"
+      <div class="m-1 inline-flex flex-row bg-white rounded p-2 items-center">
+        <Icon
+          id="audio_3"
+          class="cursor-pointer w-8 h-8 p-2 mr-2 bg-orange-400 text-zinc-50 rounded"
+          icon="IconPlay"
+        />
+        <a
+          class="underline"
+          href="./static/media/samples/TV_Spies.mp3"
+          target="_blank">watching TV</a
         >
-            StateSong Downloads
-        </p>
-        <p class="text-gray-700 text-base font-montserrat mt-2">
-            LISTEN! You're Made of Music!!! StateSong apps lets you hear your
-            'states' as music. As you listen to YOUR StateSongs, you are
-            synchronized with your best states. Download the
-            <a
-                class="text-cyan-700 underline"
-                href="https://play.google.com/store/apps/details?id=medimuse.com.statesong"
-                target="_blank"
-            >
-                StateSong Beta (Google Play)
-            </a>
-            &
-            <a
-                class="text-cyan-700 underline"
-                href="./static/media/StateSongManual.pdf"
-                target="_blank"
-            >
-                StateSong User Guide
-            </a>.
-        </p>
+      </div>
 
-        <Divider styles="pt-12 pb-12" />
-
-        <p
-            class="text-gray-600 text-lg md:text-2xl leading-none font-montserrat pb-4 md:pb-6 font-bold"
+      <div class="m-1 inline-flex flex-row bg-white rounded p-2 items-center">
+        <Icon
+          id="audio_4"
+          class="cursor-pointer w-8 h-8 p-2 mr-2 bg-orange-400 text-zinc-50 rounded"
+          icon="IconPlay"
+        />
+        <a
+          class="underline"
+          href="./static/media/samples/heavy_thinking.mp3"
+          target="_blank">studying</a
         >
-            StateSong Cloud Platform
-        </p>
-        <p class="text-gray-700 text-base font-montserrat mt-2">
-            Create & Share StateSongs on the StateSong Cloud. More coming soon!!
-        </p>
+      </div>
 
-        <Divider styles="pt-12 pb-12" />
-
-        <p
-            class="text-gray-600 text-lg md:text-2xl leading-none font-montserrat pb-4 md:pb-6 font-bold"
+      <div class="m-1 inline-flex flex-row bg-white rounded p-2 items-center">
+        <Icon
+          id="audio_5"
+          class="cursor-pointer w-8 h-8 p-2 mr-2 bg-orange-400 text-zinc-50 rounded"
+          icon="IconPlay"
+        />
+        <a
+          class="underline"
+          href="./static/media/samples/heavy_thinking.mp3"
+          target="_blank">day dreaming</a
         >
-            StateSong SDK, APIs
-        </p>
-        <p class="text-gray-700 text-base font-montserrat mt-2">
-            Our SDK provides licensed access to a toolkit of libraries, apis,
-            and plugins so you can leverage the power of the StateSong core
-            technology.
-        </p>
+      </div>
 
-        <Divider styles="pt-12 pb-12" />
-
-        <p
-            class="text-gray-600 text-lg md:text-2xl leading-none font-montserrat pb-4 md:pb-6 font-bold"
+      <div class="m-1 inline-flex flex-row bg-white rounded p-2 items-center">
+        <Icon
+          id="audio_6"
+          class="cursor-pointer w-8 h-8 p-2 mr-2 bg-orange-400 text-zinc-50 rounded"
+          icon="IconPlay"
+        />
+        <a
+          class="underline"
+          href="./static/media/samples/working.mp3"
+          target="_blank">gardening</a
         >
-            StateSong OpenSource UI
-        </p>
-        <p class="text-gray-700 text-base font-montserrat mt-2">
-            MediMuse provides OpenSource access to StateSong technology so YOU
-            can development UIs and apps for health & wellness, sports, and
-            music production.
-        </p>
+      </div>
 
-        <Divider styles="pt-12 pb-12" />
-
-        <p
-            class="text-gray-600 text-lg md:text-2xl leading-none font-montserrat pb-4 md:pb-6 font-bold"
+      <div class="m-1 inline-flex flex-row bg-white rounded p-2 items-center">
+        <Icon
+          id="audio_7"
+          class="cursor-pointer w-8 h-8 p-2 mr-2 bg-orange-400 text-zinc-50 rounded"
+          icon="IconPlay"
+        />
+        <a
+          class="underline"
+          href="./static/media/samples/explore.mp3"
+          target="_blank">exploring</a
         >
-            StateSong Community
-        </p>
-        <p class="text-gray-700 text-base font-montserrat mt-2">
-            If the intent and opportunities of StateSong Technology resonates
-            with you, tell us about yourself in an email to
-            community@medimuse.net.
-        </p>
+      </div>
+
+      <div class="m-1 inline-flex flex-row bg-white rounded p-2 items-center">
+        <Icon
+          id="audio_8"
+          class="cursor-pointer w-8 h-8 p-2 mr-2 bg-orange-400 text-zinc-50 rounded"
+          icon="IconPlay"
+        />
+        <a
+          class="underline"
+          href="./static/media/samples/weirdness.mp3"
+          target="_blank">funny moods</a
+        >
+      </div>
     </div>
+    <p class="text-gray-700 text-base font-montserrat pt-6">
+      These samples were converted from biometric data to music using the
+      Statesong app. Now you can hear what YOUR states, moods and activities
+      sound like.
+    </p>
+
+    <Divider styles="pt-12 pb-12" />
+
+    <p
+      class="text-gray-600 text-lg md:text-2xl leading-none font-montserrat pb-4 md:pb-6 font-bold"
+    >
+      StateSong News
+    </p>
+    <p class="text-gray-700 text-base font-montserrat mt-2">
+      Click on the following activities and states to hear sample StateSongs:
+    </p>
+    <p class="text-gray-700 text-base mt-4 mb-8">
+      Empatica Blog:
+      <a
+        class="text-cyan-700 underline"
+        href="https://www.empatica.com/blog/statesong-converting-human-data-to-music-using-the-e4.html"
+        target="_blank"
+      >
+        Converting Human Data to Music Using the E4
+      </a>
+      "... StateSong, which in combination with the E4, records and converts biometric
+      data from the wrist as music to help improve peoples' states over time." -
+      <a
+        class="text-cyan-700 underline"
+        href="https://www.empatica.com/"
+        target="_blank"
+      >
+        Empatica
+      </a>, creator of the
+      <a
+        class="text-cyan-700 underline"
+        href="https://www.empatica.com/research/e4/"
+        target="_blank"
+      >
+        E4
+      </a>, a R&D/Medical grade 5 biometric wrist device,
+    </p>
+
+    <Divider styles="pt-12 pb-12" />
+
+    <p
+      class="text-gray-600 text-lg md:text-2xl leading-none font-montserrat pb-4 md:pb-6 font-bold"
+    >
+      StateSong Downloads
+    </p>
+    <p class="text-gray-700 text-base font-montserrat mt-2">
+      LISTEN! You're Made of Music!!! StateSong apps lets you hear your 'states'
+      as music. As you listen to YOUR StateSongs, you are synchronized with your
+      best states. Download the
+      <a
+        class="text-cyan-700 underline"
+        href="https://play.google.com/store/apps/details?id=medimuse.com.statesong"
+        target="_blank"
+      >
+        StateSong Beta (Google Play)
+      </a>
+      &
+      <a
+        class="text-cyan-700 underline"
+        href="./static/media/StateSongManual.pdf"
+        target="_blank"
+      >
+        StateSong User Guide
+      </a>.
+    </p>
+
+    <Divider styles="pt-12 pb-12" />
+
+    <p
+      class="text-gray-600 text-lg md:text-2xl leading-none font-montserrat pb-4 md:pb-6 font-bold"
+    >
+      StateSong Cloud Platform
+    </p>
+    <p class="text-gray-700 text-base font-montserrat mt-2">
+      Create & Share StateSongs on the StateSong Cloud. More coming soon!!
+    </p>
+
+    <Divider styles="pt-12 pb-12" />
+
+    <p
+      class="text-gray-600 text-lg md:text-2xl leading-none font-montserrat pb-4 md:pb-6 font-bold"
+    >
+      StateSong SDK, APIs
+    </p>
+    <p class="text-gray-700 text-base font-montserrat mt-2">
+      Our SDK provides licensed access to a toolkit of libraries, apis, and
+      plugins so you can leverage the power of the StateSong core technology.
+    </p>
+
+    <Divider styles="pt-12 pb-12" />
+
+    <p
+      class="text-gray-600 text-lg md:text-2xl leading-none font-montserrat pb-4 md:pb-6 font-bold"
+    >
+      StateSong OpenSource UI
+    </p>
+    <p class="text-gray-700 text-base font-montserrat mt-2">
+      MediMuse provides OpenSource access to StateSong technology so YOU can
+      development UIs and apps for health & wellness, sports, and music
+      production.
+    </p>
+
+    <Divider styles="pt-12 pb-12" />
+
+    <p
+      class="text-gray-600 text-lg md:text-2xl leading-none font-montserrat pb-4 md:pb-6 font-bold"
+    >
+      StateSong Community
+    </p>
+    <p class="text-gray-700 text-base font-montserrat mt-2">
+      If the intent and opportunities of StateSong Technology resonates with
+      you, tell us about yourself in an email to community@medimuse.net.
+    </p>
+  </div>
 </div>
+
+<script>
+  import { Howl, Howler } from "howler";
+
+  let isPlaying = false;
+  let currentAudio = "";
+
+  const audio_1_container = new Howl({
+    src: ["./static/media/samples/at_peace.mp3"],
+    html5: true,
+    preload: "metadata",
+    onend: function () {
+      isPlaying = false;
+    },
+  });
+
+  const audio_2_container = new Howl({
+    src: ["./static/media/samples/out_2_run.mp3"],
+    html5: true,
+    preload: "metadata",
+    onend: function () {
+      isPlaying = false;
+    },
+  });
+
+  const audio_3_container = new Howl({
+    src: ["./static/media/samples/TV_Spies.mp3"],
+    html5: true,
+    preload: "metadata",
+    onend: function () {
+      isPlaying = false;
+    },
+  });
+
+  const audio_4_container = new Howl({
+    src: ["./static/media/samples/heavy_thinking.mp3"],
+    html5: true,
+    preload: "metadata",
+    onend: function () {
+      isPlaying = false;
+    },
+  });
+
+  const audio_5_container = new Howl({
+    src: ["./static/media/samples/heavy_thinking.mp3"],
+    html5: true,
+    preload: "metadata",
+    onend: function () {
+      isPlaying = false;
+    },
+  });
+
+  const audio_6_container = new Howl({
+    src: ["./static/media/samples/working.mp3"],
+    html5: true,
+    preload: "metadata",
+    onend: function () {
+      isPlaying = false;
+    },
+  });
+
+  const audio_7_container = new Howl({
+    src: ["./static/media/samples/explore.mp3"],
+    html5: true,
+    preload: "metadata",
+    onend: function () {
+      isPlaying = false;
+    },
+  });
+
+  const audio_8_container = new Howl({
+    src: ["./static/media/samples/weirdness.mp3"],
+    html5: true,
+    preload: "metadata",
+    onend: function () {
+      isPlaying = false;
+    },
+  });
+
+  const player_1 = document.getElementById("audio_1");
+  const player_2 = document.getElementById("audio_2");
+  const player_3 = document.getElementById("audio_3");
+  const player_4 = document.getElementById("audio_4");
+  const player_5 = document.getElementById("audio_5");
+  const player_6 = document.getElementById("audio_6");
+  const player_7 = document.getElementById("audio_7");
+  const player_8 = document.getElementById("audio_8");
+
+  player_1.addEventListener("click", (e) => {
+    e.preventDefault();
+    if (isPlaying) {
+      Howler.stop();
+      isPlaying = false;
+      currentAudio = "";
+      return;
+    }
+    isPlaying = true;
+    currentAudio = "audio_1";
+    audio_1_container.play();
+  });
+
+  player_2.addEventListener("click", (e) => {
+    e.preventDefault();
+    if (isPlaying) {
+      Howler.stop();
+      isPlaying = false;
+      currentAudio = "";
+      return;
+    }
+    isPlaying = true;
+    currentAudio = "audio_2";
+    audio_2_container.play();
+  });
+
+  player_3.addEventListener("click", (e) => {
+    e.preventDefault();
+    if (isPlaying) {
+      Howler.stop();
+      isPlaying = false;
+      currentAudio = "";
+      return;
+    }
+    isPlaying = true;
+    currentAudio = "audio_3";
+    audio_3_container.play();
+  });
+
+  player_4.addEventListener("click", (e) => {
+    e.preventDefault();
+    if (isPlaying) {
+      Howler.stop();
+      isPlaying = false;
+      currentAudio = "";
+      return;
+    }
+    isPlaying = true;
+    currentAudio = "audio_4";
+    audio_4_container.play();
+  });
+
+  player_5.addEventListener("click", (e) => {
+    e.preventDefault();
+    if (isPlaying) {
+      Howler.stop();
+      isPlaying = false;
+      currentAudio = "";
+      return;
+    }
+    isPlaying = true;
+    currentAudio = "audio_5";
+    audio_5_container.play();
+  });
+
+  player_6.addEventListener("click", (e) => {
+    e.preventDefault();
+    if (isPlaying) {
+      Howler.stop();
+      isPlaying = false;
+      currentAudio = "";
+      return;
+    }
+    isPlaying = true;
+    currentAudio = "audio_6";
+    audio_6_container.play();
+  });
+
+  player_7.addEventListener("click", (e) => {
+    e.preventDefault();
+    if (isPlaying) {
+      Howler.stop();
+      isPlaying = false;
+      currentAudio = "";
+      return;
+    }
+    isPlaying = true;
+    currentAudio = "audio_7";
+    audio_7_container.play();
+  });
+
+  player_8.addEventListener("click", (e) => {
+    e.preventDefault();
+    if (isPlaying) {
+      Howler.stop();
+      isPlaying = false;
+      currentAudio = "";
+      return;
+    }
+    isPlaying = true;
+    currentAudio = "audio_8";
+    audio_8_container.play();
+  });
+</script>
