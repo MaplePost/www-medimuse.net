@@ -10,7 +10,7 @@
     <!-- For when you want to add a mini player for samples
       <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.3/howler.min.js" integrity="sha512-6+YN/9o9BWrk6wSfGxQGpt3EUK6XeHi6yeHV+TYD2GR0Sj/cggRpXr1BrAQf0as6XslxomMUxXp2vIl+fv0QRA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     -->
-  <link rel="stylesheet" href="/assets/index.dcf1ef81.css" /><script type="module" src="/hoisted.f29437c4.js"></script></head>
+  <link rel="stylesheet" href="/assets/index.0424279a.css" /><script type="module" src="/hoisted.b17f3fb9.js"></script></head>
 
   <body class="flex flex-col flex-grow w-full min-h-screen bg-slate-100">
     <!--[if IE]>
@@ -145,49 +145,146 @@
     </p>
 </div>
 
-<!-- End About --><!-- StateSong --><div id="app-section" class="bg-gray-200">
+<!-- End About --><!-- StateSong --><div id="howitworks-section" class="bg-neutral-50">
+  <div class="container mx-auto p-8 pt-24 md:pt-36 pb-24">
+    <p class="text-gray-600 text-lg md:text-2xl leading-none font-montserrat pb-4 md:pb-6 font-bold">
+      How it all works
+    </p>
+    <p class="text-gray-700 text-base font-montserrat mt-2 pb-2">
+      An exmaple of the flow for generating StateSong audio from Empatica stored data.
+    </p>
+    <div id="chart-container" class="p-2">
+  <div id="chart" class="h-96"></div>
+  <div id="chart-controls" class="flex flex-row">
+    <p class="p-2 bg-slate-200 text-gray-700 text-base font-montserrat rounded-sm">
+      Heart-Rate
+    </p>
+  </div>
+</div>
+
+
+  </div>
+</div><!-- StateSong --><div id="app-section" class="bg-gray-200">
   <div class="container mx-auto p-8 pt-24 md:pt-36 pb-24">
     <p class="text-gray-600 text-lg md:text-2xl leading-none font-montserrat pb-4 md:pb-6 font-bold">
       StateSong Samples
     </p>
-    <p class="text-gray-700 text-base font-montserrat mt-2">
+    <p class="text-gray-700 text-base font-montserrat mt-2 pb-2">
       Click on the following activities and states to hear sample StateSongs:
     </p>
-    <p class="text-gray-500 text-xs font-montserrat leading-none">
-      opens in a new tab
-    </p>
-    <ul class="list-none pt-4 pl-4 pr-0 text-cyan-700">
-      <li>
-        <div class="inline-flex flex-row bg-white rounded p-2 items-center">
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="{2}" viewBox="0 0 24 24" height="1em" width="1em" id="audio_1" class="cursor-pointer w-8 h-8 p-2 mr-2 bg-orange-400 text-zinc-50 rounded">
+    <div class="flex flex-row flex-wrap pt-4 pl-4 pr-0 text-cyan-700">
+      <div class="m-1 inline-flex flex-row bg-white rounded p-2 items-center">
+        <div id="audio_1" class="cursor-pointer w-8 h-8 p-2 mr-2 bg-green-500 text-zinc-50 rounded">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="{2}" viewBox="0 0 24 24" height="1em" width="1em" class="block">
   <path stroke="none" d="M0 0h24v24H0z" ></path>
   <path d="M7 4v16l13-8z" ></path>
 </svg>
-          <a class="underline" href="./static/media/samples/at_peace.mp3" target="_blank">Meditating</a>
+          <svg fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="{2}" viewBox="0 0 24 24" height="1em" width="1em" class="hidden">
+    <path stroke="none" d="M0 0h24v24H0z" ></path>
+    <path d="M7 5 H17 A2 2 0 0 1 19 7 V17 A2 2 0 0 1 17 19 H7 A2 2 0 0 1 5 17 V7 A2 2 0 0 1 7 5 z" ></path>
+</svg>
         </div>
-      </li>
-      <li>
+        <a class="underline" href="./static/media/samples/at_peace.mp3" target="_blank">Meditating</a>
+      </div>
+
+      <div class="m-1 inline-flex flex-row bg-white rounded p-2 items-center">
+        <div id="audio_2" class="cursor-pointer w-8 h-8 p-2 mr-2 bg-green-500 text-zinc-50 rounded">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="{2}" viewBox="0 0 24 24" height="1em" width="1em" class="block">
+  <path stroke="none" d="M0 0h24v24H0z" ></path>
+  <path d="M7 4v16l13-8z" ></path>
+</svg>
+          <svg fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="{2}" viewBox="0 0 24 24" height="1em" width="1em" class="hidden">
+    <path stroke="none" d="M0 0h24v24H0z" ></path>
+    <path d="M7 5 H17 A2 2 0 0 1 19 7 V17 A2 2 0 0 1 17 19 H7 A2 2 0 0 1 5 17 V7 A2 2 0 0 1 7 5 z" ></path>
+</svg>
+        </div>
         <a class="underline" href="./static/media/samples/out_2_run.mp3" target="_blank">running</a>
-      </li>
-      <li>
+      </div>
+
+      <div class="m-1 inline-flex flex-row bg-white rounded p-2 items-center">
+        <div id="audio_3" class="cursor-pointer w-8 h-8 p-2 mr-2 bg-green-500 text-zinc-50 rounded">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="{2}" viewBox="0 0 24 24" height="1em" width="1em" class="block">
+  <path stroke="none" d="M0 0h24v24H0z" ></path>
+  <path d="M7 4v16l13-8z" ></path>
+</svg>
+          <svg fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="{2}" viewBox="0 0 24 24" height="1em" width="1em" class="hidden">
+    <path stroke="none" d="M0 0h24v24H0z" ></path>
+    <path d="M7 5 H17 A2 2 0 0 1 19 7 V17 A2 2 0 0 1 17 19 H7 A2 2 0 0 1 5 17 V7 A2 2 0 0 1 7 5 z" ></path>
+</svg>
+        </div>
         <a class="underline" href="./static/media/samples/TV_Spies.mp3" target="_blank">watching TV</a>
-      </li>
-      <li>
+      </div>
+
+      <div class="m-1 inline-flex flex-row bg-white rounded p-2 items-center">
+        <div id="audio_4" class="cursor-pointer w-8 h-8 p-2 mr-2 bg-green-500 text-zinc-50 rounded">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="{2}" viewBox="0 0 24 24" height="1em" width="1em" class="block">
+  <path stroke="none" d="M0 0h24v24H0z" ></path>
+  <path d="M7 4v16l13-8z" ></path>
+</svg>
+          <svg fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="{2}" viewBox="0 0 24 24" height="1em" width="1em" class="hidden">
+    <path stroke="none" d="M0 0h24v24H0z" ></path>
+    <path d="M7 5 H17 A2 2 0 0 1 19 7 V17 A2 2 0 0 1 17 19 H7 A2 2 0 0 1 5 17 V7 A2 2 0 0 1 7 5 z" ></path>
+</svg>
+        </div>
         <a class="underline" href="./static/media/samples/heavy_thinking.mp3" target="_blank">studying</a>
-      </li>
-      <li>
+      </div>
+
+      <div class="m-1 inline-flex flex-row bg-white rounded p-2 items-center">
+        <div id="audio_5" class="cursor-pointer w-8 h-8 p-2 mr-2 bg-green-500 text-zinc-50 rounded">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="{2}" viewBox="0 0 24 24" height="1em" width="1em" class="block">
+  <path stroke="none" d="M0 0h24v24H0z" ></path>
+  <path d="M7 4v16l13-8z" ></path>
+</svg>
+          <svg fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="{2}" viewBox="0 0 24 24" height="1em" width="1em" class="hidden">
+    <path stroke="none" d="M0 0h24v24H0z" ></path>
+    <path d="M7 5 H17 A2 2 0 0 1 19 7 V17 A2 2 0 0 1 17 19 H7 A2 2 0 0 1 5 17 V7 A2 2 0 0 1 7 5 z" ></path>
+</svg>
+        </div>
         <a class="underline" href="./static/media/samples/heavy_thinking.mp3" target="_blank">day dreaming</a>
-      </li>
-      <li>
+      </div>
+
+      <div class="m-1 inline-flex flex-row bg-white rounded p-2 items-center">
+        <div id="audio_6" class="cursor-pointer w-8 h-8 p-2 mr-2 bg-green-500 text-zinc-50 rounded">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="{2}" viewBox="0 0 24 24" height="1em" width="1em" class="block">
+  <path stroke="none" d="M0 0h24v24H0z" ></path>
+  <path d="M7 4v16l13-8z" ></path>
+</svg>
+          <svg fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="{2}" viewBox="0 0 24 24" height="1em" width="1em" class="hidden">
+    <path stroke="none" d="M0 0h24v24H0z" ></path>
+    <path d="M7 5 H17 A2 2 0 0 1 19 7 V17 A2 2 0 0 1 17 19 H7 A2 2 0 0 1 5 17 V7 A2 2 0 0 1 7 5 z" ></path>
+</svg>
+        </div>
         <a class="underline" href="./static/media/samples/working.mp3" target="_blank">gardening</a>
-      </li>
-      <li>
+      </div>
+
+      <div class="m-1 inline-flex flex-row bg-white rounded p-2 items-center">
+        <div id="audio_7" class="cursor-pointer w-8 h-8 p-2 mr-2 bg-green-500 text-zinc-50 rounded">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="{2}" viewBox="0 0 24 24" height="1em" width="1em" class="block">
+  <path stroke="none" d="M0 0h24v24H0z" ></path>
+  <path d="M7 4v16l13-8z" ></path>
+</svg>
+          <svg fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="{2}" viewBox="0 0 24 24" height="1em" width="1em" class="hidden">
+    <path stroke="none" d="M0 0h24v24H0z" ></path>
+    <path d="M7 5 H17 A2 2 0 0 1 19 7 V17 A2 2 0 0 1 17 19 H7 A2 2 0 0 1 5 17 V7 A2 2 0 0 1 7 5 z" ></path>
+</svg>
+        </div>
         <a class="underline" href="./static/media/samples/explore.mp3" target="_blank">exploring</a>
-      </li>
-      <li>
+      </div>
+
+      <div class="m-1 inline-flex flex-row bg-white rounded p-2 items-center">
+        <div id="audio_8" class="cursor-pointer w-8 h-8 p-2 mr-2 bg-green-500 text-zinc-50 rounded">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="{2}" viewBox="0 0 24 24" height="1em" width="1em" class="block">
+  <path stroke="none" d="M0 0h24v24H0z" ></path>
+  <path d="M7 4v16l13-8z" ></path>
+</svg>
+          <svg fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="{2}" viewBox="0 0 24 24" height="1em" width="1em" class="hidden">
+    <path stroke="none" d="M0 0h24v24H0z" ></path>
+    <path d="M7 5 H17 A2 2 0 0 1 19 7 V17 A2 2 0 0 1 17 19 H7 A2 2 0 0 1 5 17 V7 A2 2 0 0 1 7 5 z" ></path>
+</svg>
+        </div>
         <a class="underline" href="./static/media/samples/weirdness.mp3" target="_blank">funny moods</a>
-      </li>
-    </ul>
+      </div>
+    </div>
     <p class="text-gray-700 text-base font-montserrat pt-6">
       These samples were converted from biometric data to music using the
       Statesong app. Now you can hear what YOUR states, moods and activities

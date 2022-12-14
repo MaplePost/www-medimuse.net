@@ -1,0 +1,169 @@
+---
+// Display a loaded CSV file
+// Uses papa parse
+---
+
+<div id="chart-container" class="p-2">
+  <div id="chart" class="h-96"></div>
+  <div id="chart-controls" class="flex flex-row">
+    <p
+      class="p-2 bg-slate-200 text-gray-700 text-base font-montserrat rounded-sm"
+    >
+      Heart-Rate
+    </p>
+  </div>
+</div>
+
+<script>
+  import Papa from "papaparse";
+  import ApexCharts from "apexcharts";
+
+  // Helpers
+  const parseCSV = async (file) => {
+    return new Promise((resolve, reject) => {
+      Papa.parse(file, {
+        download: true,
+        delimiter: "\n",
+        complete: (results) => {
+          return resolve(results);
+        },
+        error: (error) => {
+          return reject(error);
+        },
+      });
+    });
+  };
+
+  // Variables
+  const basePath = "./static/media/csv/";
+
+  // List of available samples
+  const empaticaTrackList = [
+    {
+      name: "rOjO_Sativa_Ruminate_Pace_15m",
+      description: "Empatica smaple recording for playback",
+      path: "sample_1/",
+      files: [
+        "ACC.csv",
+        "BVP.csv",
+        "EDA.csv",
+        "HR.csv",
+        "IBI.csv",
+        "tags.csv",
+        "TEMP.csv",
+      ],
+    },
+  ];
+
+  // Run pull
+  // Hacked map array. TODO: Fix this to a real loader
+  const getStaticDataFromEmpatica = async (trackId = 0) => {
+    let files = empaticaTrackList[trackId].files;
+    return await Promise.all(
+      files.map(async (v, i) => {
+        let file = basePath + empaticaTrackList[trackId].path + v;
+        let data = await parseCSV(file);
+        return {
+          name: v,
+          data: data,
+        };
+      })
+    );
+  };
+
+  // Hook for initializing the chart container
+  const initializeCharts = async () => {
+    return new Promise((resolve) => {
+      let container = document.querySelector("#chart");
+      return resolve(container);
+    });
+  };
+
+  // Start
+  const chartsContainer = await initializeCharts();
+  const loadedData = await getStaticDataFromEmpatica(0);
+
+  // Draw Charts
+  const renderHeartRateChart = (chartsContainer, data, useDataWindow) => {
+    if (useDataWindow) {
+      // Not implemented
+    } else {
+      let startTime = new Date(data.data.data[0] * 1000);
+      let sampleRate = 1 / data.data.data[1];
+      let timeSeriese = data.data.data.slice(2);
+      let options = {
+        series: [
+          {
+            name: "Heart Rate",
+            data: timeSeriese.map((v) => {
+              return [
+                startTime.setSeconds(startTime.getSeconds() + sampleRate),
+                v,
+              ];
+            }),
+          },
+        ],
+        chart: {
+          type: "line",
+          stacked: false,
+          height: 350,
+          zoom: {
+            type: "x",
+            enabled: true,
+            autoScaleYaxis: true,
+          },
+          toolbar: {
+            autoSelected: "zoom",
+          },
+        },
+        dataLabels: {
+          enabled: false,
+        },
+        markers: {
+          size: 0,
+        },
+        title: {
+          text: "Heart Rate @1.000Hz",
+          align: "left",
+        },
+        yaxis: {
+          labels: {
+            formatter: function (val) {
+              return val.toFixed(0);
+            },
+          },
+          title: {
+            text: "HR",
+          },
+        },
+        xaxis: {
+          type: "datetime",
+        },
+        tooltip: {
+          shared: false,
+          x: {
+            show: false
+          },
+          y: {
+            formatter: function (val) {
+              return val;
+            },
+            title: {
+              formatter: (seriesName) => seriesName,
+            },
+          },
+        },
+      };
+      let chart = new ApexCharts(chartsContainer, options);
+      chart.render();
+      return chart;
+    }
+  };
+
+  // render the data
+  renderHeartRateChart(
+    chartsContainer,
+    loadedData.find(({ name }) => name === "HR.csv"),
+    false
+  );
+</script>
