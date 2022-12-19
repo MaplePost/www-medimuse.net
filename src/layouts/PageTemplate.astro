@@ -13,10 +13,6 @@ const { title, description, themeColor } = Astro.props;
     <meta name="description" content={description} />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content={themeColor} />
-    <link href="./static/css/vendor/video-js.css" rel="stylesheet" />
-    <!-- For when you want to add a mini player for samples
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.3/howler.min.js" integrity="sha512-6+YN/9o9BWrk6wSfGxQGpt3EUK6XeHi6yeHV+TYD2GR0Sj/cggRpXr1BrAQf0as6XslxomMUxXp2vIl+fv0QRA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    -->
   </head>
 
   <body class="flex flex-col flex-grow w-full min-h-screen bg-slate-100">
@@ -29,10 +25,8 @@ const { title, description, themeColor } = Astro.props;
 		<![endif]-->
     <slot />
 
-    <script src="./static/js/vendor/scrollMonitor.js" is:inline></script>
     <script src="./static/js/vendor/smooth-scroll.polyfills.min.js" is:inline
     ></script>
-    <script src="./static/js/vendor/video.js" is:inline></script>
     <script src="./static/js/main.js" is:inline></script>
   </body>
 </html>

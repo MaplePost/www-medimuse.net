@@ -2,25 +2,14 @@
 // Component:
 // Video player Hero section
 
-// autoplay
 ---
 
-<div id="home-section" class="min-h-screen w-full h-full border-b bg-black" style="height:100vh;">
-    <video
-        id="hero-video"
-        class="video-js vjs-big-play-centered"
-        controls
-        preload="auto"
-        fill="true"
-        data-setup="{}"
-    >
+<div
+    id="home-section"
+    class="min-h-screen w-full h-full border-b bg-black"
+    style="height:100vh;"
+>
+    <video id="hero-video" class="bg-black object-cover w-full h-full" poster="poster.jpg" autoplay playsinline muted controls>
         <source src="./static/media/StateSong_05s.mp4" type="video/mp4" />
-        <p class="vjs-no-js">
-            To view this video please enable JavaScript, and consider upgrading
-            to a web browser that
-            <a href="https://videojs.com/html5-video-support/" target="_blank"
-                >supports HTML5 video</a
-            >
-        </p>
     </video>
 </div>

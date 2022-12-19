@@ -5,6 +5,9 @@ import tailwind from "@astrojs/tailwind";
 
 // https://astro.build/config
 export default defineConfig({
+  build: {
+    format: 'file'
+  },
   site: 'https://medimuse.net/',
   integrations: [tailwind()]
 });

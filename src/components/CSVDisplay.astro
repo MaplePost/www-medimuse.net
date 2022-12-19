@@ -6,41 +6,85 @@
 <div id="chart-container" class="p-2">
   <div id="chart" class="h-96"></div>
   <div id="chart-controls" class="flex flex-row">
-    <p
-      class="p-2 bg-slate-200 text-gray-700 text-base font-montserrat rounded-sm"
+    <div
+      id="chart_hr"
+      data-chartFile="HR.csv"
+      class="cursor-pointer p-2 m-1 bg-slate-200 rounded-sm"
     >
-      Heart-Rate
-    </p>
+      <p class="text-gray-700 text-base font-montserrat">Heart-Rate</p>
+    </div>
+    <div
+      id="chart_temp"
+      data-chartFile="TEMP.csv"
+      class="cursor-pointer p-2 m-1 bg-slate-200 rounded-sm"
+    >
+      <p class="text-gray-700 text-base font-montserrat">Temperature</p>
+    </div>
+    <div
+      id="chart_acc"
+      data-chartFile="ACC.csv"
+      class="cursor-pointer p-2 m-1 bg-slate-200 rounded-sm"
+    >
+      <p class="text-gray-700 text-base font-montserrat">Accelerometer</p>
+    </div>
+    <div
+      id="chart_eda"
+      data-chartFile="EDA.csv"
+      class="cursor-pointer p-2 m-1 bg-slate-200 rounded-sm"
+    >
+      <p class="text-gray-700 text-base font-montserrat">Electrodermal</p>
+    </div>
+    <div
+      id="chart_bvp"
+      data-chartFile="BVP.csv"
+      class="cursor-pointer p-2 m-1 bg-slate-200 rounded-sm"
+    >
+      <p class="text-gray-700 text-base font-montserrat">Blood Volume Pulse</p>
+    </div>
+    <div
+      id="chart_ibi"
+      data-chartFile="IBI.csv"
+      class="cursor-pointer p-2 m-1 bg-slate-200 rounded-sm"
+    >
+      <p class="text-gray-700 text-base font-montserrat">Inter-Beat Interval</p>
+    </div>
   </div>
 </div>
 
 <script>
-  import Papa from "papaparse";
   import ApexCharts from "apexcharts";
-
-  // Helpers
-  const parseCSV = async (file) => {
-    return new Promise((resolve, reject) => {
-      Papa.parse(file, {
-        download: true,
-        delimiter: "\n",
-        complete: (results) => {
-          return resolve(results);
-        },
-        error: (error) => {
-          return reject(error);
-        },
-      });
-    });
-  };
+  import DataLoaders from "./data/LoadersCSV.js";
+  import HeartRateChart from "./charts/HeartRate";
+  import TemperatureChart from "./charts/Temperature.js";
+  import ElectrodermalChart from "./charts/Electrodermal.js";
+  import AccelerometerChart from "./charts/Accelerometer.js";
+  import BloodVolumePulseChart from "./charts/BloodVolumePulse.js";
 
   // Variables
   const basePath = "./static/media/csv/";
+  const chartContainer = document.querySelector("#chart");
+  let loadedData = [];
+
+  // State
+  let currentActiveChart = {
+    hasChart: null,
+    chartModule: null,
+  };
+
+  const updateCurrentActiveChart = (
+    activeChart = { hasChart: null, chartModule: null }
+  ) => {
+    currentActiveChart = activeChart;
+  };
+
+  const getCurrentActiveChart = () => {
+    return currentActiveChart;
+  };
 
   // List of available samples
-  const empaticaTrackList = [
+  const exampleData_Empatica = [
     {
-      name: "rOjO_Sativa_Ruminate_Pace_15m",
+      name: "rOjO_Ruminate_Pace_15m",
       description: "Empatica smaple recording for playback",
       path: "sample_1/",
       files: [
@@ -55,115 +99,100 @@
     },
   ];
 
-  // Run pull
-  // Hacked map array. TODO: Fix this to a real loader
-  const getStaticDataFromEmpatica = async (trackId = 0) => {
-    let files = empaticaTrackList[trackId].files;
-    return await Promise.all(
-      files.map(async (v, i) => {
-        let file = basePath + empaticaTrackList[trackId].path + v;
-        let data = await parseCSV(file);
-        return {
-          name: v,
-          data: data,
-        };
-      })
-    );
+  // Html controls on the page
+  const chartControllerObjects = [
+    document.getElementById("chart_hr"),
+    document.getElementById("chart_temp"),
+    document.getElementById("chart_acc"),
+    document.getElementById("chart_eda"),
+    document.getElementById("chart_bvp"),
+  ];
+
+  // Chart render methods
+  const renderChart = (options) => {
+    let chart = new ApexCharts(chartContainer, options);
+    chart.render();
+    return chart;
   };
 
-  // Hook for initializing the chart container
-  const initializeCharts = async () => {
-    return new Promise((resolve) => {
-      let container = document.querySelector("#chart");
-      return resolve(container);
+  // attach events
+  const chartClickHandler = function (chartId = "HR.csv") {
+    let chartContainerPointer = null;
+    let chart = getCurrentActiveChart();
+    let loadResult;
+    switch (chartId) {
+      case "HR.csv":
+        if (chart.hasChart !== null) chart.chartModule.destroy();
+        loadResult = loadedData.find(({ name }) => name === "HR.csv");
+        chartContainerPointer = renderChart(
+          HeartRateChart.getChartData(loadResult.csv.data)
+        );
+        break;
+      case "TEMP.csv":
+        if (chart.hasChart !== null) {
+          chart.chartModule.destroy();
+        }
+        loadResult = loadedData.find(({ name }) => name === "TEMP.csv");
+        chartContainerPointer = renderChart(
+          TemperatureChart.getChartData(loadResult.csv.data)
+        );
+        break;
+      case "ACC.csv":
+        if (chart.hasChart !== null) {
+          chart.chartModule.destroy();
+        }
+        loadResult = loadedData.find(({ name }) => name === "ACC.csv");
+        chartContainerPointer = renderChart(
+          AccelerometerChart.getChartData(loadResult.csv.data)
+        );
+        break;
+      case "EDA.csv":
+        if (chart.hasChart !== null) {
+          chart.chartModule.destroy();
+        }
+        loadResult = loadedData.find(({ name }) => name === "EDA.csv");
+        chartContainerPointer = renderChart(
+          ElectrodermalChart.getChartData(loadResult.csv.data)
+        );
+        break;
+      case "BVP.csv":
+        if (chart.hasChart !== null) {
+          chart.chartModule.destroy();
+        }
+        loadResult = loadedData.find(({ name }) => name === "BVP.csv");
+        chartContainerPointer = renderChart(
+          BloodVolumePulseChart.getChartData(loadResult.csv.data)
+        );
+        break;
+      default:
+        updateCurrentActiveChart({
+          hasChart: null,
+          chartModule: null,
+        });
+        return;
+    }
+    updateCurrentActiveChart({
+      hasChart: true,
+      chartModule: chartContainerPointer,
     });
   };
 
-  // Start
-  const chartsContainer = await initializeCharts();
-  const loadedData = await getStaticDataFromEmpatica(0);
-
-  // Draw Charts
-  const renderHeartRateChart = (chartsContainer, data, useDataWindow) => {
-    if (useDataWindow) {
-      // Not implemented
-    } else {
-      let startTime = new Date(data.data.data[0] * 1000);
-      let sampleRate = 1 / data.data.data[1];
-      let timeSeriese = data.data.data.slice(2);
-      let options = {
-        series: [
-          {
-            name: "Heart Rate",
-            data: timeSeriese.map((v) => {
-              return [
-                startTime.setSeconds(startTime.getSeconds() + sampleRate),
-                v,
-              ];
-            }),
-          },
-        ],
-        chart: {
-          type: "line",
-          stacked: false,
-          height: 350,
-          zoom: {
-            type: "x",
-            enabled: true,
-            autoScaleYaxis: true,
-          },
-          toolbar: {
-            autoSelected: "zoom",
-          },
-        },
-        dataLabels: {
-          enabled: false,
-        },
-        markers: {
-          size: 0,
-        },
-        title: {
-          text: "Heart Rate @1.000Hz",
-          align: "left",
-        },
-        yaxis: {
-          labels: {
-            formatter: function (val) {
-              return val.toFixed(0);
-            },
-          },
-          title: {
-            text: "HR",
-          },
-        },
-        xaxis: {
-          type: "datetime",
-        },
-        tooltip: {
-          shared: false,
-          x: {
-            show: false
-          },
-          y: {
-            formatter: function (val) {
-              return val;
-            },
-            title: {
-              formatter: (seriesName) => seriesName,
-            },
-          },
-        },
-      };
-      let chart = new ApexCharts(chartsContainer, options);
-      chart.render();
-      return chart;
-    }
-  };
-
-  // render the data
-  renderHeartRateChart(
-    chartsContainer,
-    loadedData.find(({ name }) => name === "HR.csv"),
-    false
+  // Start - Automatically loads data - Sample 1
+  loadedData = await DataLoaders.getEmpaticaData(
+    basePath,
+    exampleData_Empatica,
+    0
   );
+
+  // items loaded setup controller events
+  chartControllerObjects.map(function (element, index) {
+    element.addEventListener("click", (e) => {
+      e.preventDefault();
+      let chartFileToLoad = element.getAttribute("data-chartFile");
+      chartClickHandler(chartFileToLoad);
+    });
+  });
+
+  // RENDER
+  chartClickHandler(); // show default chart on load
 </script>

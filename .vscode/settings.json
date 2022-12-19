@@ -1,12 +1,22 @@
 {
     "cSpell.words": [
+        "apexcharts",
         "astro",
         "astrojs",
+        "datetime",
+        "Electrodermal",
         "elif",
+        "empatica",
         "fontsource",
         "lockfiles",
         "medimuse",
+        "microsiemens",
+        "papaparse",
+        "Photoplethysmography",
         "pnpm",
-        "tsconfigs"
+        "timeseries",
+        "tsconfigs",
+        "xaxis",
+        "yaxis"
     ]
 }
