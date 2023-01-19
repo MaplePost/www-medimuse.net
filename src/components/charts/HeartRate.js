@@ -16,7 +16,7 @@ const getChartData = (data) => {
 
     let sampleRate = getSampleRateAsSeconds(data[1]);
     let tick = 0;
-    let timeSeries = data.slice(2); // remove first 2 rows
+    let timeSeries = data.slice(2);
 
     let formattedData = timeSeries.map((v, i) => {
         return [
@@ -24,8 +24,6 @@ const getChartData = (data) => {
             parseFloat(v),
         ];
     });
-
-    console.log("HR: total samples", formattedData.length);
 
     let chartOptions = {
         series: [
@@ -47,10 +45,13 @@ const getChartData = (data) => {
                 shadeIntensity: 0.65,
             },
         },
+        noData: {
+            text: 'Loading...'
+        },
         chart: {
             type: "line",
             stacked: false,
-            height: 350,
+            height: "350",
             width: "100%",
             fontFamily: "Montserrat",
             animations: {
@@ -62,11 +63,25 @@ const getChartData = (data) => {
             zoom: {
                 type: "x",
                 enabled: true,
-                autoScaleYaxis: true,
+                autoScaleYaxis: true
             },
             toolbar: {
                 autoSelected: "zoom",
+                tools: {
+                    download: false
+                }
+            }
+        },
+        grid: {
+            row: {
+                colors: ["#E5E5E5", "#FFFFFF"],
+                opacity: 0.25
             },
+            xaxis: {
+                lines: {
+                    show: true
+                }
+            }
         },
         dataLabels: {
             enabled: false,
@@ -76,7 +91,7 @@ const getChartData = (data) => {
         },
         title: {
             text: "Heart Rate @1.000Hz ",
-            align: "left",
+            align: "center",
         },
         yaxis: {
             labels: {

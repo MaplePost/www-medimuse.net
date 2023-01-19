@@ -6,7 +6,7 @@
     <meta name="description" content="Developer and Artifact repository for MediMuse Software.">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#FAFAFA">
-  <link rel="stylesheet" href="/assets/how-it-works.d0e834fd.css" /><script type="module" src="/hoisted.8306d0be.js"></script></head>
+  <link rel="stylesheet" href="/assets/how-it-works.e8a161e5.css" /><script type="module" src="/hoisted.f1aaac81.js"></script></head>
 
   <body class="flex flex-col flex-grow w-full min-h-screen bg-slate-100">
     <!--[if IE]>
@@ -16,39 +16,113 @@
         your experience and security.
       </p>
 		<![endif]-->
-    <!-- StateSong --><div id="howitworks-section" class="bg-neutral-50">
-  <div class="container mx-auto p-8 pt-24 md:pt-36 pb-24">
-    <p class="text-gray-600 text-lg md:text-2xl leading-none font-montserrat pb-4 md:pb-6 font-bold">
+    <!-- StateSong --><div id="howitworks-section" class="bg-gradient-to-br from-slate-100 to-slate-200">
+  <div class="container mx-auto">
+    <p class="text-gray-600 text-lg md:text-2xl leading-none font-montserrat p-2 pb-4 md:pb-6 font-bold">
       How it all works
     </p>
-    <p class="text-gray-700 text-base font-montserrat mt-2 pb-2">
-      An exmaple of the flow for generating StateSong audio from Empatica stored data.
+    <p class="text-gray-700 text-base font-montserrat mt-2 p-2">
+      An exmaple of the flow for generating StateSong audio from Empatica stored
+      data.
     </p>
-    <div id="chart-container" class="p-2">
-  <div id="chart" class="h-96"></div>
-  <div id="chart-controls" class="flex flex-row">
-    <div id="chart_hr" data-chartFile="HR.csv" class="cursor-pointer p-2 m-1 bg-slate-200 rounded-sm">
-      <p class="text-gray-700 text-base font-montserrat">Heart-Rate</p>
+    <!-- data inputs -->
+    <div class="flex flex-col md:flex-row p-2 pb-12">
+      <div class="flex flex-row md:flex-col w-full md:w-48 mr-0 mb-2 md:mr-2 md:mb-0">
+        <div class="flex flex-col w-1/3 h-48 md:w-full flex-grow p-1">
+          <div class="w-full h-full shadow-2xl rounded-3xl"></div>
+        </div>
+        <div class="flex flex-col w-1/3 h-48 md:w-full flex-grow p-1">
+          <div class="relative flex justify-center items-center w-full h-full shadow-2xl rounded-3xl">
+            <img class="absolute object-cover w-full p-6 opacity-100" src="./static/img/e4.png" alt="StateSong App">
+            <p class="absolute bottom-3 left-3 bg-slate-50 bg-opacity-95 p-2 rounded-2xl text-gray-500 text-xs font-montserrat">
+              Empatica E4
+            </p>
+          </div>
+        </div>
+        <div class="flex flex-col w-1/3 h-48 md:w-full flex-grow p-1">
+          <div class="relative flex justify-center items-center w-full h-full shadow-2xl rounded-3xl">
+            <img class="absolute object-cover w-full opacity-50" src="./static/img/sense2.png" alt="StateSong App">
+            <p class="absolute bottom-3 left-3 bg-slate-50 bg-opacity-50 p-2 rounded-2xl text-gray-500 text-xs font-montserrat">
+              FitBit-Sense 2
+            </p>
+          </div>
+        </div>
+      </div>
+      <div id="chart-container" class="flex flex-col flex-grow shadow-2xl rounded-2xl p-2">
+  <div class="pt-4 pb-4 md:hidden">
+    <div class="relative border-b border-cyan-800 border-opacity-25">
+        <span class="relative top-px block w-12 h-px bg-orange-400"></span>
     </div>
-    <div id="chart_temp" data-chartFile="TEMP.csv" class="cursor-pointer p-2 m-1 bg-slate-200 rounded-sm">
-      <p class="text-gray-700 text-base font-montserrat">Temperature</p>
+</div>
+
+  <div id="chart-controls" class="pt-0 md:pt-4 flex flex-row flex-wrap">
+    <div id="chart_hr" data-chartFile="HR.csv" class="flex cursor-pointer m-1 bg-slate-100 border-r rounded-md shadow-sm overflow-hidden">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16" height="1em" width="1em" class="text-gray-500 ml-1.5 mt-1 w-5 mr-1.5">
+  <path     stroke="none"
+    fillRule="evenodd"
+    d="M8 2.748l-.717-.737C5.6.281 2.514.878 1.4 3.053.918 3.995.78 5.323 1.508 7H.43c-2.128-5.697 4.165-8.83 7.394-5.857.06.055.119.112.176.171a3.12 3.12 0 01.176-.17c3.23-2.974 9.522.159 7.394 5.856h-1.078c.728-1.677.59-3.005.108-3.947C13.486.878 10.4.28 8.717 2.01L8 2.748zM2.212 10h1.315C4.593 11.183 6.05 12.458 8 13.795c1.949-1.337 3.407-2.612 4.473-3.795h1.315c-1.265 1.566-3.14 3.25-5.788 5-2.648-1.75-4.523-3.434-5.788-5zm8.252-6.686a.5.5 0 00-.945.049L7.921 8.956 6.464 5.314a.5.5 0 00-.88-.091L3.732 8H.5a.5.5 0 000 1H4a.5.5 0 00.416-.223l1.473-2.209 1.647 4.118a.5.5 0 00.945-.049l1.598-5.593 1.457 3.642A.5.5 0 0012 9h3.5a.5.5 0 000-1h-3.162l-1.874-4.686z"
+  ></path>
+</svg>
+      <p class="text-gray-700 bg-slate-50 text-xs font-montserrat p-1 pl-1 pr-1.5">
+        Heart-Rate
+      </p>
     </div>
-    <div id="chart_acc" data-chartFile="ACC.csv" class="cursor-pointer p-2 m-1 bg-slate-200 rounded-sm">
-      <p class="text-gray-700 text-base font-montserrat">Accelerometer</p>
+    <div id="chart_temp" data-chartFile="TEMP.csv" class="flex cursor-pointer m-1 bg-slate-100 border-r rounded-md shadow-sm overflow-hidden">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="{2}" viewBox="0 0 24 24" height="1em" width="1em" class="text-gray-500 ml-1.5 mt-1 w-5 mr-1.5">
+  <path stroke="none" d="M0 0h24v24H0z" ></path>
+  <path d="M8 8 A2 2 0 0 1 6 10 A2 2 0 0 1 4 8 A2 2 0 0 1 8 8 z" ></path>
+  <path d="M20 9a3 3 0 00-3-3h-1a3 3 0 00-3 3v6a3 3 0 003 3h1a3 3 0 003-3" ></path>
+</svg>
+      <p class="text-gray-700 bg-slate-50 text-xs font-montserrat p-1 pl-1 pr-1.5">
+        Temperature
+      </p>
     </div>
-    <div id="chart_eda" data-chartFile="EDA.csv" class="cursor-pointer p-2 m-1 bg-slate-200 rounded-sm">
-      <p class="text-gray-700 text-base font-montserrat">Electrodermal</p>
+    <div id="chart_acc" data-chartFile="ACC.csv" class="flex cursor-pointer m-1 bg-slate-100 border-r rounded-md shadow-sm overflow-hidden">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="{2}" viewBox="0 0 24 24" height="1em" width="1em" class="text-gray-500 ml-1.5 mt-1 w-5 mr-1.5">
+  <path stroke="none" d="M0 0h24v24H0z" ></path>
+  <path d="M6 17.6l-2-1.1V14M4 10V7.5l2-1.1M10 4.1L12 3l2 1.1M18 6.4l2 1.1V10M20 14v2.5l-2 1.12M14 19.9L12 21l-2-1.1M12 12l2-1.1M18 8.6l2-1.1M12 12v2.5M12 18.5V21M12 12l-2-1.12M6 8.6L4 7.5" ></path>
+</svg>
+      <p class="text-gray-700 bg-slate-50 text-xs font-montserrat p-1 pl-1 pr-1.5">
+        Accelerometer
+      </p>
     </div>
-    <div id="chart_bvp" data-chartFile="BVP.csv" class="cursor-pointer p-2 m-1 bg-slate-200 rounded-sm">
-      <p class="text-gray-700 text-base font-montserrat">Blood Volume Pulse</p>
+    <div id="chart_eda" data-chartFile="EDA.csv" class="flex cursor-pointer m-1 bg-slate-100 border-r rounded-md shadow-sm overflow-hidden">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" height="1em" width="1em" class="text-gray-500 ml-1.5 mt-1 w-5 mr-1.5">
+  <path d="M21 11a9 9 0 00-18 0c0 3.92 2.5 7.24 6 8.5V22h2v-2.06c.33.06.66.06 1 .06s.67 0 1-.06V22h2v-2.5c3.5-1.26 6-4.58 6-8.5m-9 7c-3.86 0-7-3.14-7-7s3.14-7 7-7 7 3.14 7 7-3.14 7-7 7M8 7h8v2H8V7m4.75 3l-3 3L11 14.25 9.75 15.5l1.5 1.5 3-3L13 12.75l1.25-1.25-1.5-1.5z" ></path>   
+</svg>
+      <p class="text-gray-700 bg-slate-50 text-xs font-montserrat p-1 pl-1 pr-1.5">
+        Electrodermal
+      </p>
     </div>
-    <div id="chart_ibi" data-chartFile="IBI.csv" class="cursor-pointer p-2 m-1 bg-slate-200 rounded-sm">
-      <p class="text-gray-700 text-base font-montserrat">Inter-Beat Interval</p>
+    <div id="chart_bvp" data-chartFile="BVP.csv" class="flex cursor-pointer m-1 bg-slate-100 border-r rounded-md shadow-sm overflow-hidden">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="currentcolor" stroke="none" strokeLinecap="round" strokeLinejoin="round" strokeWidth="{2}" viewBox="0 0 512 512" height="1em" width="1em" class="text-gray-500 ml-1.5 mt-1 w-5 mr-1.5">
+  <path d="M432 272a48.09 48.09 0 00-45.25 32h-39.22l-28.35-85.06a16 16 0 00-30.56.66l-44.51 155.76-52.33-314a16 16 0 00-31.3-1.25L99.51 304H48a16 16 0 000 32h64a16 16 0 0015.52-12.12l45.34-181.37 51.36 308.12A16 16 0 00239.1 464h.91a16 16 0 0015.37-11.6l49.8-174.28 15.64 46.94A16 16 0 00336 336h50.75A48 48 0 10432 272z" ></path>
+</svg>
+      <p class="text-gray-700 bg-slate-50 text-xs font-montserrat p-1 pl-1 pr-1.5">
+        Blood Volume Pulse
+      </p>
     </div>
+    <div id="chart_ibi" data-chartFile="IBI.csv" class="flex cursor-pointer m-1 bg-slate-100 border-r rounded-md shadow-sm overflow-hidden">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="currentColor" height="1em" width="1em" class="text-gray-500 ml-1.5 mt-1 w-5 mr-1.5">
+  <path d="M456 128a40 40 0 00-37.23 54.6l-84.17 84.17a39.86 39.86 0 00-29.2 0l-60.17-60.17a40 40 0 10-74.46 0L70.6 306.77a40 40 0 1022.63 22.63L193.4 229.23a39.86 39.86 0 0029.2 0l60.17 60.17a40 40 0 1074.46 0l84.17-84.17A40 40 0 10456 128z" ></path>
+</svg>
+      <p class="text-gray-700 bg-slate-50 text-xs font-montserrat p-1 pl-1 pr-1.5">
+        Inter-Beat Interval
+      </p>
+    </div>
+  </div>
+  <div id="chart" class="relative flex flex-grow justify-center items-center">
   </div>
 </div>
 
 
+    </div>
+    <!-- end data inputs -->
+    <div class="pt-4 pb-12">
+    <div class="relative border-b border-cyan-800 border-opacity-25">
+        <span class="relative top-px block w-12 h-px bg-orange-400"></span>
+    </div>
+</div>
   </div>
 </div><!-- Contact --><div id="contact-section" class="bg-gray-900 min-h-screen">
     <div class="container flex flex-col items-center justify-center mx-auto p-8 pt-24 md:pt-0 min-h-screen">

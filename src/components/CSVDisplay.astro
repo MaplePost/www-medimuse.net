@@ -1,53 +1,101 @@
 ---
 // Display a loaded CSV file
 // Uses papa parse
+
+import Icon from "./Icon.astro";
+import Divider from "../components/Divider.astro";
 ---
 
-<div id="chart-container" class="p-2">
-  <div id="chart" class="h-96"></div>
-  <div id="chart-controls" class="flex flex-row">
+<div
+  id="chart-container"
+  class="flex flex-col flex-grow shadow-2xl rounded-2xl overflow-hidden"
+>
+  <Divider styles="pl-2 pr-2 pt-4 pb-4 md:hidden" />
+
+  <div
+    id="chart-controls"
+    class="pt-0 md:pt-4 pb-0 md:pb-4 flex flex-row flex-wrap bg-slate-50 border-b"
+  >
     <div
       id="chart_hr"
       data-chartFile="HR.csv"
-      class="cursor-pointer p-2 m-1 bg-slate-200 rounded-sm"
+      class="flex cursor-pointer m-1 bg-slate-100 border-r rounded-md shadow-sm overflow-hidden transition-all text-gray-400 hover:text-gray-700"
     >
-      <p class="text-gray-700 text-base font-montserrat">Heart-Rate</p>
+      <Icon icon="IconHeartRate" class="text-gray-500 ml-1.5 mt-1 w-5 mr-1.5" />
+      <p
+        class="bg-slate-50 text-xs font-montserrat p-1 pl-1 pr-1.5 select-none"
+      >
+        Heart-Rate
+      </p>
     </div>
     <div
       id="chart_temp"
       data-chartFile="TEMP.csv"
-      class="cursor-pointer p-2 m-1 bg-slate-200 rounded-sm"
+      class="flex cursor-pointer m-1 bg-slate-100 border-r rounded-md shadow-sm overflow-hidden transition-all text-gray-400 hover:text-gray-700"
     >
-      <p class="text-gray-700 text-base font-montserrat">Temperature</p>
+      <Icon icon="IconTempC" class="text-gray-500 ml-1.5 mt-1 w-5 mr-1.5" />
+      <p
+        class="bg-slate-50 text-xs font-montserrat p-1 pl-1 pr-1.5 select-none"
+      >
+        Temperature
+      </p>
     </div>
     <div
       id="chart_acc"
       data-chartFile="ACC.csv"
-      class="cursor-pointer p-2 m-1 bg-slate-200 rounded-sm"
+      class="flex cursor-pointer m-1 bg-slate-100 border-r rounded-md shadow-sm overflow-hidden transition-all text-gray-400 hover:text-gray-700"
     >
-      <p class="text-gray-700 text-base font-montserrat">Accelerometer</p>
+      <Icon
+        icon="IconAccelerometer"
+        class="text-gray-500 ml-1.5 mt-1 w-5 mr-1.5"
+      />
+      <p
+        class="bg-slate-50 text-xs font-montserrat p-1 pl-1 pr-1.5 select-none"
+      >
+        Accelerometer
+      </p>
     </div>
     <div
       id="chart_eda"
       data-chartFile="EDA.csv"
-      class="cursor-pointer p-2 m-1 bg-slate-200 rounded-sm"
+      class="flex cursor-pointer m-1 bg-slate-100 border-r rounded-md shadow-sm overflow-hidden transition-all text-gray-400 hover:text-gray-700"
     >
-      <p class="text-gray-700 text-base font-montserrat">Electrodermal</p>
+      <Icon icon="IconElectric" class="text-gray-500 ml-1.5 mt-1 w-5 mr-1.5" />
+      <p
+        class="bg-slate-50 text-xs font-montserrat p-1 pl-1 pr-1.5 select-none"
+      >
+        Electrodermal
+      </p>
     </div>
     <div
       id="chart_bvp"
       data-chartFile="BVP.csv"
-      class="cursor-pointer p-2 m-1 bg-slate-200 rounded-sm"
+      class="flex cursor-pointer m-1 bg-slate-100 border-r rounded-md shadow-sm overflow-hidden transition-all text-gray-400 hover:text-gray-700"
     >
-      <p class="text-gray-700 text-base font-montserrat">Blood Volume Pulse</p>
+      <Icon icon="IconPulse" class="text-gray-500 ml-1.5 mt-1 w-5 mr-1.5" />
+      <p
+        class="bg-slate-50 text-xs font-montserrat p-1 pl-1 pr-1.5 select-none"
+      >
+        Blood Volume Pulse
+      </p>
     </div>
     <div
       id="chart_ibi"
       data-chartFile="IBI.csv"
-      class="cursor-pointer p-2 m-1 bg-slate-200 rounded-sm"
+      class="flex cursor-pointer m-1 bg-slate-100 border-r rounded-md shadow-sm overflow-hidden transition-all text-gray-400 hover:text-gray-700"
     >
-      <p class="text-gray-700 text-base font-montserrat">Inter-Beat Interval</p>
+      <Icon icon="IconInterval" class="text-gray-500 ml-1.5 mt-1 w-5 mr-1.5" />
+      <p
+        class=" bg-slate-50 text-xs font-montserrat p-1 pl-1 pr-1.5 select-none"
+      >
+        Inter-Beat Interval
+      </p>
     </div>
+  </div>
+  <div
+    id="chart"
+    class="relative flex flex-grow justify-center items-center bg-slate-100 p-2"
+  >
   </div>
 </div>
 
@@ -69,10 +117,11 @@
   let currentActiveChart = {
     hasChart: null,
     chartModule: null,
+    currentControl: null,
   };
 
   const updateCurrentActiveChart = (
-    activeChart = { hasChart: null, chartModule: null }
+    activeChart = { hasChart: null, chartModule: null, currentControl: null }
   ) => {
     currentActiveChart = activeChart;
   };
@@ -116,10 +165,17 @@
   };
 
   // attach events
-  const chartClickHandler = function (chartId = "HR.csv") {
+  const chartClickHandler = function (
+    chartId = "HR.csv",
+    element = document.getElementById("chart_hr")
+  ) {
     let chartContainerPointer = null;
     let chart = getCurrentActiveChart();
-    let loadResult;
+    let loadResult = null;
+    if (chart.currentControl !== null) {
+      chart.currentControl.classList.toggle("shadow-lg");
+      chart.currentControl.classList.toggle("text-gray-900");
+    }
     switch (chartId) {
       case "HR.csv":
         if (chart.hasChart !== null) chart.chartModule.destroy();
@@ -127,6 +183,8 @@
         chartContainerPointer = renderChart(
           HeartRateChart.getChartData(loadResult.csv.data)
         );
+        element.classList.toggle("shadow-lg");
+        element.classList.toggle("text-gray-900");
         break;
       case "TEMP.csv":
         if (chart.hasChart !== null) {
@@ -136,6 +194,8 @@
         chartContainerPointer = renderChart(
           TemperatureChart.getChartData(loadResult.csv.data)
         );
+        element.classList.toggle("shadow-lg");
+        element.classList.toggle("text-gray-900");
         break;
       case "ACC.csv":
         if (chart.hasChart !== null) {
@@ -145,6 +205,8 @@
         chartContainerPointer = renderChart(
           AccelerometerChart.getChartData(loadResult.csv.data)
         );
+        element.classList.toggle("shadow-lg");
+        element.classList.toggle("text-gray-900");
         break;
       case "EDA.csv":
         if (chart.hasChart !== null) {
@@ -154,6 +216,8 @@
         chartContainerPointer = renderChart(
           ElectrodermalChart.getChartData(loadResult.csv.data)
         );
+        element.classList.toggle("shadow-lg");
+        element.classList.toggle("text-gray-900");
         break;
       case "BVP.csv":
         if (chart.hasChart !== null) {
@@ -163,17 +227,21 @@
         chartContainerPointer = renderChart(
           BloodVolumePulseChart.getChartData(loadResult.csv.data)
         );
+        element.classList.toggle("shadow-lg");
+        element.classList.toggle("text-gray-900");
         break;
       default:
         updateCurrentActiveChart({
           hasChart: null,
           chartModule: null,
+          currentControl: null,
         });
         return;
     }
     updateCurrentActiveChart({
       hasChart: true,
       chartModule: chartContainerPointer,
+      currentControl: element,
     });
   };
 
@@ -189,7 +257,7 @@
     element.addEventListener("click", (e) => {
       e.preventDefault();
       let chartFileToLoad = element.getAttribute("data-chartFile");
-      chartClickHandler(chartFileToLoad);
+      chartClickHandler(chartFileToLoad, element);
     });
   });
 
