@@ -6,7 +6,23 @@
     <meta name="description" content="Developer and Artifact repository for MediMuse Software.">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#FAFAFA">
-  <link rel="stylesheet" href="/assets/how-it-works.e8a161e5.css" /><script type="module" src="/hoisted.f1aaac81.js"></script></head>
+
+    <!-- Facebook Meta Tags -->
+    <meta property="og:url" content="https://medimuse.net">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="MediMuse.net (MediMuse LLC)">
+    <meta property="og:description" content="StateSong® Converts Biometric Data into Music">
+    <meta property="og:image" content="https://medimuse.net/img/static/img/MediMuse-Logo.jpg">
+
+    <!-- Twitter Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta property="twitter:domain" content="medimuse.net">
+    <meta property="twitter:url" content="https://medimuse.net/">
+    <meta name="twitter:title" content="MediMuse.Net - 2022">
+    <meta name="twitter:description" content="StateSong® Converts Biometric Data into Music">
+    <meta name="twitter:image" content="https://medimuse.net/img/static/img/MediMuse-Logo.jpg">
+
+  <link rel="stylesheet" href="/assets/how-it-works.6f73b9ce.css" /><script type="module" src="/hoisted.c4c39ac7.js"></script></head>
 
   <body class="flex flex-col flex-grow w-full min-h-screen bg-slate-100">
     <!--[if IE]>
@@ -16,12 +32,25 @@
         your experience and security.
       </p>
 		<![endif]-->
-    <!-- StateSong --><div id="howitworks-section" class="bg-gradient-to-br from-slate-100 to-slate-200">
+    <!-- Inputs --><div id="howitworks-section" class="bg-gradient-to-br from-slate-100 to-slate-200">
   <div class="container mx-auto">
-    <p class="text-gray-600 text-lg md:text-2xl leading-none font-montserrat p-2 pb-4 md:pb-6 font-bold">
+    <p class="text-gray-600 text-lg md:text-4xl leading-none font-montserrat p-2 pb-0 font-bold">
       How it all works
     </p>
-    <p class="text-gray-700 text-base font-montserrat mt-2 p-2">
+    <p class="text-gray-700 text-base font-montserrat pl-2 pr-2 pb-4">
+      Using an Empatica E4 device to generate StateSong Audio.
+    </p>
+    <p class="text-gray-500 text-xs font-montserrat border-l-4 border-lime-500 ml-4 mr-4 pl-2 pr-2 max-w-md">
+      Online demo and process of loading the Empatica E4's csv data recorded
+      during a session. The Gnarley component is available for download/testing
+      here for Windows and is show here staticly just for showing the process.
+      The StateSong mobile application is available here and is currently
+      Android only.
+    </p>
+    <p class="text-gray-600 text-lg md:text-xl font-montserrat pl-2 pt-8 pr-2 pb-0 font-bold">
+      1. Inputs
+    </p>
+    <p class="text-gray-700 text-base font-montserrat pl-2 pr-2 pb-4">
       An exmaple of the flow for generating StateSong audio from Empatica stored
       data.
     </p>
@@ -48,70 +77,70 @@
           </div>
         </div>
       </div>
-      <div id="chart-container" class="flex flex-col flex-grow shadow-2xl rounded-2xl p-2">
-  <div class="pt-4 pb-4 md:hidden">
+      <div id="chart-container" class="flex flex-col flex-grow shadow-2xl rounded-2xl overflow-hidden">
+  <div class="pl-2 pr-2 pt-4 pb-4 md:hidden">
     <div class="relative border-b border-cyan-800 border-opacity-25">
         <span class="relative top-px block w-12 h-px bg-orange-400"></span>
     </div>
 </div>
 
-  <div id="chart-controls" class="pt-0 md:pt-4 flex flex-row flex-wrap">
-    <div id="chart_hr" data-chartFile="HR.csv" class="flex cursor-pointer m-1 bg-slate-100 border-r rounded-md shadow-sm overflow-hidden">
+  <div id="chart-controls" class="pt-0 md:pt-4 pb-0 md:pb-4 flex flex-row flex-wrap bg-slate-50 border-b">
+    <div id="chart_hr" data-chartFile="HR.csv" class="flex cursor-pointer m-1 bg-slate-100 border-r rounded-md shadow-sm overflow-hidden transition-all text-gray-400 hover:text-gray-700">
       <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16" height="1em" width="1em" class="text-gray-500 ml-1.5 mt-1 w-5 mr-1.5">
   <path     stroke="none"
     fillRule="evenodd"
     d="M8 2.748l-.717-.737C5.6.281 2.514.878 1.4 3.053.918 3.995.78 5.323 1.508 7H.43c-2.128-5.697 4.165-8.83 7.394-5.857.06.055.119.112.176.171a3.12 3.12 0 01.176-.17c3.23-2.974 9.522.159 7.394 5.856h-1.078c.728-1.677.59-3.005.108-3.947C13.486.878 10.4.28 8.717 2.01L8 2.748zM2.212 10h1.315C4.593 11.183 6.05 12.458 8 13.795c1.949-1.337 3.407-2.612 4.473-3.795h1.315c-1.265 1.566-3.14 3.25-5.788 5-2.648-1.75-4.523-3.434-5.788-5zm8.252-6.686a.5.5 0 00-.945.049L7.921 8.956 6.464 5.314a.5.5 0 00-.88-.091L3.732 8H.5a.5.5 0 000 1H4a.5.5 0 00.416-.223l1.473-2.209 1.647 4.118a.5.5 0 00.945-.049l1.598-5.593 1.457 3.642A.5.5 0 0012 9h3.5a.5.5 0 000-1h-3.162l-1.874-4.686z"
   ></path>
 </svg>
-      <p class="text-gray-700 bg-slate-50 text-xs font-montserrat p-1 pl-1 pr-1.5">
+      <p class="bg-slate-50 text-xs font-montserrat p-1 pl-1 pr-1.5 select-none">
         Heart-Rate
       </p>
     </div>
-    <div id="chart_temp" data-chartFile="TEMP.csv" class="flex cursor-pointer m-1 bg-slate-100 border-r rounded-md shadow-sm overflow-hidden">
+    <div id="chart_temp" data-chartFile="TEMP.csv" class="flex cursor-pointer m-1 bg-slate-100 border-r rounded-md shadow-sm overflow-hidden transition-all text-gray-400 hover:text-gray-700">
       <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="{2}" viewBox="0 0 24 24" height="1em" width="1em" class="text-gray-500 ml-1.5 mt-1 w-5 mr-1.5">
   <path stroke="none" d="M0 0h24v24H0z" ></path>
   <path d="M8 8 A2 2 0 0 1 6 10 A2 2 0 0 1 4 8 A2 2 0 0 1 8 8 z" ></path>
   <path d="M20 9a3 3 0 00-3-3h-1a3 3 0 00-3 3v6a3 3 0 003 3h1a3 3 0 003-3" ></path>
 </svg>
-      <p class="text-gray-700 bg-slate-50 text-xs font-montserrat p-1 pl-1 pr-1.5">
+      <p class="bg-slate-50 text-xs font-montserrat p-1 pl-1 pr-1.5 select-none">
         Temperature
       </p>
     </div>
-    <div id="chart_acc" data-chartFile="ACC.csv" class="flex cursor-pointer m-1 bg-slate-100 border-r rounded-md shadow-sm overflow-hidden">
+    <div id="chart_acc" data-chartFile="ACC.csv" class="flex cursor-pointer m-1 bg-slate-100 border-r rounded-md shadow-sm overflow-hidden transition-all text-gray-400 hover:text-gray-700">
       <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="{2}" viewBox="0 0 24 24" height="1em" width="1em" class="text-gray-500 ml-1.5 mt-1 w-5 mr-1.5">
   <path stroke="none" d="M0 0h24v24H0z" ></path>
   <path d="M6 17.6l-2-1.1V14M4 10V7.5l2-1.1M10 4.1L12 3l2 1.1M18 6.4l2 1.1V10M20 14v2.5l-2 1.12M14 19.9L12 21l-2-1.1M12 12l2-1.1M18 8.6l2-1.1M12 12v2.5M12 18.5V21M12 12l-2-1.12M6 8.6L4 7.5" ></path>
 </svg>
-      <p class="text-gray-700 bg-slate-50 text-xs font-montserrat p-1 pl-1 pr-1.5">
+      <p class="bg-slate-50 text-xs font-montserrat p-1 pl-1 pr-1.5 select-none">
         Accelerometer
       </p>
     </div>
-    <div id="chart_eda" data-chartFile="EDA.csv" class="flex cursor-pointer m-1 bg-slate-100 border-r rounded-md shadow-sm overflow-hidden">
+    <div id="chart_eda" data-chartFile="EDA.csv" class="flex cursor-pointer m-1 bg-slate-100 border-r rounded-md shadow-sm overflow-hidden transition-all text-gray-400 hover:text-gray-700">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" height="1em" width="1em" class="text-gray-500 ml-1.5 mt-1 w-5 mr-1.5">
   <path d="M21 11a9 9 0 00-18 0c0 3.92 2.5 7.24 6 8.5V22h2v-2.06c.33.06.66.06 1 .06s.67 0 1-.06V22h2v-2.5c3.5-1.26 6-4.58 6-8.5m-9 7c-3.86 0-7-3.14-7-7s3.14-7 7-7 7 3.14 7 7-3.14 7-7 7M8 7h8v2H8V7m4.75 3l-3 3L11 14.25 9.75 15.5l1.5 1.5 3-3L13 12.75l1.25-1.25-1.5-1.5z" ></path>   
 </svg>
-      <p class="text-gray-700 bg-slate-50 text-xs font-montserrat p-1 pl-1 pr-1.5">
+      <p class="bg-slate-50 text-xs font-montserrat p-1 pl-1 pr-1.5 select-none">
         Electrodermal
       </p>
     </div>
-    <div id="chart_bvp" data-chartFile="BVP.csv" class="flex cursor-pointer m-1 bg-slate-100 border-r rounded-md shadow-sm overflow-hidden">
+    <div id="chart_bvp" data-chartFile="BVP.csv" class="flex cursor-pointer m-1 bg-slate-100 border-r rounded-md shadow-sm overflow-hidden transition-all text-gray-400 hover:text-gray-700">
       <svg xmlns="http://www.w3.org/2000/svg" fill="currentcolor" stroke="none" strokeLinecap="round" strokeLinejoin="round" strokeWidth="{2}" viewBox="0 0 512 512" height="1em" width="1em" class="text-gray-500 ml-1.5 mt-1 w-5 mr-1.5">
   <path d="M432 272a48.09 48.09 0 00-45.25 32h-39.22l-28.35-85.06a16 16 0 00-30.56.66l-44.51 155.76-52.33-314a16 16 0 00-31.3-1.25L99.51 304H48a16 16 0 000 32h64a16 16 0 0015.52-12.12l45.34-181.37 51.36 308.12A16 16 0 00239.1 464h.91a16 16 0 0015.37-11.6l49.8-174.28 15.64 46.94A16 16 0 00336 336h50.75A48 48 0 10432 272z" ></path>
 </svg>
-      <p class="text-gray-700 bg-slate-50 text-xs font-montserrat p-1 pl-1 pr-1.5">
+      <p class="bg-slate-50 text-xs font-montserrat p-1 pl-1 pr-1.5 select-none">
         Blood Volume Pulse
       </p>
     </div>
-    <div id="chart_ibi" data-chartFile="IBI.csv" class="flex cursor-pointer m-1 bg-slate-100 border-r rounded-md shadow-sm overflow-hidden">
+    <div id="chart_ibi" data-chartFile="IBI.csv" class="flex cursor-pointer m-1 bg-slate-100 border-r rounded-md shadow-sm overflow-hidden transition-all text-gray-400 hover:text-gray-700">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="currentColor" height="1em" width="1em" class="text-gray-500 ml-1.5 mt-1 w-5 mr-1.5">
   <path d="M456 128a40 40 0 00-37.23 54.6l-84.17 84.17a39.86 39.86 0 00-29.2 0l-60.17-60.17a40 40 0 10-74.46 0L70.6 306.77a40 40 0 1022.63 22.63L193.4 229.23a39.86 39.86 0 0029.2 0l60.17 60.17a40 40 0 1074.46 0l84.17-84.17A40 40 0 10456 128z" ></path>
 </svg>
-      <p class="text-gray-700 bg-slate-50 text-xs font-montserrat p-1 pl-1 pr-1.5">
+      <p class=" bg-slate-50 text-xs font-montserrat p-1 pl-1 pr-1.5 select-none">
         Inter-Beat Interval
       </p>
     </div>
   </div>
-  <div id="chart" class="relative flex flex-grow justify-center items-center">
+  <div id="chart" class="relative flex flex-grow justify-center items-center bg-slate-100 p-2">
   </div>
 </div>
 
@@ -123,6 +152,54 @@
         <span class="relative top-px block w-12 h-px bg-orange-400"></span>
     </div>
 </div>
+  </div>
+</div>
+
+<!-- Inputs -->
+<div id="howitworks-section" class="bg-gradient-to-br from-slate-100 to-slate-200">
+  <div class="container mx-auto">
+    <p class="text-gray-600 text-lg md:text-4xl leading-none font-montserrat p-2 pb-0 font-bold">
+      How it all works
+    </p>
+    <p class="text-gray-700 text-base font-montserrat pl-2 pr-2 pb-4">
+      Using an Empatica E4 device to generate StateSong Audio.
+    </p>
+    <p class="text-gray-500 text-xs font-montserrat border-l-4 border-lime-500 ml-4 mr-4 pl-2 pr-2 max-w-md">
+      Online demo and process of loading the Empatica E4's csv data recorded
+      during a session. The Gnarley component is available for download/testing
+      here for Windows and is show here staticly just for showing the process.
+      The StateSong mobile application is available here and is currently
+      Android only.
+    </p>
+    <p class="text-gray-600 text-lg md:text-xl font-montserrat pl-2 pt-8 pr-2 pb-0 font-bold">
+      2. Transform & Broadcast
+    </p>
+    <p class="text-gray-700 text-base font-montserrat pl-2 pr-2 pb-4">
+      An exmaple of the flow for generating StateSong audio from Empatica stored
+      data.
+    </p>
+    <!-- data transforms and outputs -->
+    <div class="flex flex-col md:flex-row p-2 pb-12">
+      <div class="flex flex-row rounded-full w-48 h-48">
+        <svg width="100%" height="100%" viewBox="0 0 126 131" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;" class="w-full h-full">
+            <g id="Logo">
+                <g>
+                    <g id="Layer1">
+                        <path d="M46.296,14.199c0.823,-7.881 7.865,-14.199 16.344,-14.199c8.479,0 15.521,6.318 16.344,14.199c5.298,-5.892 14.708,-6.865 21.568,-1.881c6.86,4.984 8.843,14.234 4.877,21.094c7.75,-1.652 15.934,3.092 18.554,11.156c2.62,8.065 -1.212,16.714 -8.453,19.932c7.241,3.218 11.073,11.867 8.453,19.932c-2.62,8.064 -10.804,12.808 -18.554,11.156c3.966,6.86 1.983,16.11 -4.877,21.094c-6.86,4.984 -16.27,4.011 -21.568,-1.881c-0.823,7.881 -7.865,14.199 -16.344,14.199c-8.479,0 -15.521,-6.318 -16.344,-14.199c-5.298,5.892 -14.708,6.865 -21.568,1.881c-6.86,-4.984 -8.843,-14.234 -4.877,-21.094c-7.75,1.652 -15.934,-3.092 -18.554,-11.156c-2.62,-8.065 1.212,-16.714 8.453,-19.932c-7.241,-3.218 -11.073,-11.867 -8.453,-19.932c2.62,-8.064 10.804,-12.808 18.554,-11.156c-3.966,-6.86 -1.983,-16.11 4.877,-21.094c6.86,-4.984 16.27,-4.011 21.568,1.881Z" style="fill:url(#_Linear1);"></path></g><g id="Layer11" serif:id="Layer1"><path d="M46.296,14.199c0.823,-7.881 7.865,-14.199 16.344,-14.199c8.479,0 15.521,6.318 16.344,14.199c5.298,-5.892 14.708,-6.865 21.568,-1.881c6.86,4.984 8.843,14.234 4.877,21.094c7.75,-1.652 15.934,3.092 18.554,11.156c2.62,8.065 -1.212,16.714 -8.453,19.932c7.241,3.218 11.073,11.867 8.453,19.932c-2.62,8.064 -10.804,12.808 -18.554,11.156c3.966,6.86 1.983,16.11 -4.877,21.094c-6.86,4.984 -16.27,4.011 -21.568,-1.881c-0.823,7.881 -7.865,14.199 -16.344,14.199c-8.479,0 -15.521,-6.318 -16.344,-14.199c-5.298,5.892 -14.708,6.865 -21.568,1.881c-6.86,-4.984 -8.843,-14.234 -4.877,-21.094c-7.75,1.652 -15.934,-3.092 -18.554,-11.156c-2.62,-8.065 1.212,-16.714 8.453,-19.932c-7.241,-3.218 -11.073,-11.867 -8.453,-19.932c2.62,-8.064 10.804,-12.808 18.554,-11.156c-3.966,-6.86 -1.983,-16.11 4.877,-21.094c6.86,-4.984 16.27,-4.011 21.568,1.881Z" style="fill:url(#_Linear2);"></path></g><path d="M69.687,16.797c-4.673,-0.684 -9.421,-0.684 -14.094,-0c-1.206,3.893 -2.388,7.793 -3.544,11.702c-2.675,0.777 -5.256,1.846 -7.697,3.188c-3.581,-1.946 -7.175,-3.869 -10.781,-5.768c-3.788,2.821 -7.145,6.178 -9.965,9.965c1.899,3.606 3.822,7.2 5.768,10.781c-1.342,2.441 -2.411,5.022 -3.189,7.697c-3.908,1.156 -7.808,2.338 -11.701,3.545c-0.684,4.672 -0.684,9.42 -0,14.093c3.893,1.207 7.793,2.388 11.701,3.544c0.778,2.675 1.847,5.257 3.189,7.698c-1.946,3.581 -3.869,7.174 -5.768,10.78c2.82,3.788 6.177,7.145 9.965,9.966c3.606,-1.9 7.2,-3.822 10.781,-5.768c2.441,1.342 5.022,2.411 7.697,3.188c1.156,3.908 2.338,7.809 3.544,11.702c4.673,0.683 9.421,0.683 14.094,-0c1.207,-3.893 2.388,-7.794 3.544,-11.702c2.675,-0.777 5.256,-1.846 7.697,-3.188c3.581,1.946 7.175,3.868 10.781,5.768c3.788,-2.821 7.145,-6.178 9.966,-9.966c-1.9,-3.606 -3.823,-7.199 -5.769,-10.78c1.342,-2.441 2.412,-5.023 3.189,-7.698c3.908,-1.156 7.809,-2.337 11.701,-3.544c0.684,-4.673 0.684,-9.421 0,-14.093c-3.892,-1.207 -7.793,-2.389 -11.701,-3.545c-0.777,-2.675 -1.847,-5.256 -3.189,-7.697c1.946,-3.581 3.869,-7.175 5.769,-10.781c-2.821,-3.787 -6.178,-7.144 -9.966,-9.965c-3.606,1.899 -7.2,3.822 -10.781,5.768c-2.441,-1.342 -5.022,-2.411 -7.697,-3.188c-1.156,-3.909 -2.337,-7.809 -3.544,-11.702Zm-7.047,39.883c4.566,-0 8.274,3.707 8.274,8.273c-0,4.567 -3.708,8.274 -8.274,8.274c-4.566,0 -8.274,-3.707 -8.274,-8.274c0,-4.566 3.708,-8.273 8.274,-8.273Z" style="fill:#fff;"></path><path d="M69.687,16.797c-4.673,-0.684 -9.421,-0.684 -14.094,-0c-1.206,3.893 -2.388,7.793 -3.544,11.702c-2.675,0.777 -5.256,1.846 -7.697,3.188c-3.581,-1.946 -7.175,-3.869 -10.781,-5.768c-3.788,2.821 -7.145,6.178 -9.965,9.965c1.899,3.606 3.822,7.2 5.768,10.781c-1.342,2.441 -2.411,5.022 -3.189,7.697c-3.908,1.156 -7.808,2.338 -11.701,3.545c-0.684,4.672 -0.684,9.42 -0,14.093c3.893,1.207 7.793,2.388 11.701,3.544c0.778,2.675 1.847,5.257 3.189,7.698c-1.946,3.581 -3.869,7.174 -5.768,10.78c2.82,3.788 6.177,7.145 9.965,9.966c3.606,-1.9 7.2,-3.822 10.781,-5.768c2.441,1.342 5.022,2.411 7.697,3.188c1.156,3.908 2.338,7.809 3.544,11.702c4.673,0.683 9.421,0.683 14.094,-0c1.207,-3.893 2.388,-7.794 3.544,-11.702c2.675,-0.777 5.256,-1.846 7.697,-3.188c3.581,1.946 7.175,3.868 10.781,5.768c3.788,-2.821 7.145,-6.178 9.966,-9.966c-1.9,-3.606 -3.823,-7.199 -5.769,-10.78c1.342,-2.441 2.412,-5.023 3.189,-7.698c3.908,-1.156 7.809,-2.337 11.701,-3.544c0.684,-4.673 0.684,-9.421 0,-14.093c-3.892,-1.207 -7.793,-2.389 -11.701,-3.545c-0.777,-2.675 -1.847,-5.256 -3.189,-7.697c1.946,-3.581 3.869,-7.175 5.769,-10.781c-2.821,-3.787 -6.178,-7.144 -9.966,-9.965c-3.606,1.899 -7.2,3.822 -10.781,5.768c-2.441,-1.342 -5.022,-2.411 -7.697,-3.188c-1.156,-3.909 -2.337,-7.809 -3.544,-11.702Zm-7.047,39.883c4.566,-0 8.274,3.707 8.274,8.273c-0,4.567 -3.708,8.274 -8.274,8.274c-4.566,0 -8.274,-3.707 -8.274,-8.274c0,-4.566 3.708,-8.273 8.274,-8.273Z" style="fill:#fff;"></path><path d="M62.64,37.545c15.054,-0 27.276,12.222 27.276,27.276c0,15.054 -12.222,27.276 -27.276,27.276c-15.054,0 -27.276,-12.222 -27.276,-27.276c-0,-15.054 12.222,-27.276 27.276,-27.276Zm0,13.638c7.527,-0 13.638,6.111 13.638,13.638c0,7.527 -6.111,13.638 -13.638,13.638c-7.527,-0 -13.638,-6.111 -13.638,-13.638c0,-7.527 6.111,-13.638 13.638,-13.638Z" style="fill:url(#_Linear3);"></path></g><path d="M62.64,37.545c15.054,-0 27.276,12.222 27.276,27.276c0,15.054 -12.222,27.276 -27.276,27.276c-15.054,0 -27.276,-12.222 -27.276,-27.276c-0,-15.054 12.222,-27.276 27.276,-27.276Zm0,13.638c7.527,-0 13.638,6.111 13.638,13.638c0,7.527 -6.111,13.638 -13.638,13.638c-7.527,-0 -13.638,-6.111 -13.638,-13.638c0,-7.527 6.111,-13.638 13.638,-13.638Z" style="fill:url(#_Linear4);"></path>
+                    </g>
+                        
+                        <defs>
+                            <linearGradient id="_Linear1" x1="0" y1="0" x2="1" y2="0" gradientUnits="userSpaceOnUse" gradientTransform="matrix(73.3048,66.3429,-66.3429,73.3048,-1.85992,64.5)"><stop offset="0" style="stop-color:#b9ebff;stop-opacity:1"></stop><stop offset="1" style="stop-color:#00b5ff;stop-opacity:1"></stop></linearGradient>
+                            <linearGradient id="_Linear2" x1="0" y1="0" x2="1" y2="0" gradientUnits="userSpaceOnUse" gradientTransform="matrix(73.3048,66.3429,-66.3429,73.3048,-1.85992,64.5)"><stop offset="0" style="stop-color:#b9ebff;stop-opacity:1"></stop><stop offset="1" style="stop-color:#00b5ff;stop-opacity:1"></stop></linearGradient>
+                            <linearGradient id="_Linear3" x1="0" y1="0" x2="1" y2="0" gradientUnits="userSpaceOnUse" gradientTransform="matrix(30.9995,28.0554,-28.0554,30.9995,35.364,64.8209)"><stop offset="0" style="stop-color:#b9ebff;stop-opacity:1"></stop><stop offset="1" style="stop-color:#00b5ff;stop-opacity:1"></stop></linearGradient>
+                            <linearGradient id="_Linear4" x1="0" y1="0" x2="1" y2="0" gradientUnits="userSpaceOnUse" gradientTransform="matrix(30.9995,28.0554,-28.0554,30.9995,35.364,64.8209)"><stop offset="0" style="stop-color:#b9ebff;stop-opacity:1"></stop><stop offset="1" style="stop-color:#00b5ff;stop-opacity:1"></stop></linearGradient>
+                        </defs>
+    </svg>
+      </div>
+      <div class="pb-6 md:pb-8">
+        <img class="object-cover w-full" src="./static/img/Logomark-Gnarley.png" alt="Gnarley App">
+      </div>
+    </div>
   </div>
 </div><!-- Contact --><div id="contact-section" class="bg-gray-900 min-h-screen">
     <div class="container flex flex-col items-center justify-center mx-auto p-8 pt-24 md:pt-0 min-h-screen">
