@@ -1,0 +1,26 @@
+---
+// Layouts
+import PageTemplate from "../layouts/PageTemplate.astro";
+
+// Component Imports
+
+// Sections
+import LiveDemoApp from "../components/LiveDemoApp.astro";
+import ContactSection from "../components/ContactSection.astro";
+
+// Main parts
+import Footer from "../components/Footer.astro";
+
+// UI/UX extra bits
+
+// Variables
+const title = "MediMuse.Net - 2023";
+const description = "Demo of StateSong. ReactJS&WASM";
+const themeColor = "#FAFAFA";
+---
+
+<PageTemplate title={title} description={description} themeColor={themeColor}>
+	<LiveDemoApp />
+	<ContactSection />
+	<Footer />
+</PageTemplate>
